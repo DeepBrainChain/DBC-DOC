@@ -262,7 +262,7 @@ sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
 
 >  输入您的钱包地址（如果机器被租用，dbc将直接转入该钱包地址，请确保地址信息正确）
-> ![wallet](images/wallet.png)
+> ![wallet](DBC_install/images/wallet.png)
 
 
 
@@ -324,13 +324,13 @@ sudo systemctl restart dbc
 
 2. 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
 
-   ![](images/火狐截图_2021-06-01T08-25-33.414Z.png)
+   ![](DBC_install/images/火狐截图_2021-06-01T08-25-33.414Z.png)
 
 3. 刷新网页，等待一会。
 
 4. 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。其中，`machine_owner: AccountId` 这里填入机器里内置的钱包地址; `machineId`填入你想绑定的机器 ID， 最后点击提交交易。
 
-   ![](images/火狐截图_2021-06-01T08-29-58.877Z.png)
+   ![](DBC_install/images/火狐截图_2021-06-01T08-29-58.877Z.png)
 
 #### 方式 2: 通过脚本添加
 
