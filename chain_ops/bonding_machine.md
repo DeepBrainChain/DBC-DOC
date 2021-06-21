@@ -1,20 +1,70 @@
-# 如何绑定机器获得在线奖励
+# 机器上线步骤
 
 ## 方式 1: 通过网页钱包绑定
 
-0. 绑定之前，请确保钱包中有足够的余额。（每张卡按 10 万 DBC 估计）。
+### 0. 准备工作
 
-1. 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finnertest.dbcwallet.io#/settings/developer`
++ 绑定之前，请确保钱包中有足够的余额。（预计每张卡按 10 万 DBC）。
++ 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finnertest.dbcwallet.io#/settings/developer`
 
-2. 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
++ 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
 
-   ![](bonding_machine.assets/火狐截图_2021-06-01T08-25-33.414Z.png)
+  ![](bonding_machine.assets/火狐截图_2021-06-01T08-25-33.414Z.png)
 
-3. 刷新网页，等待一会。
++ 刷新网页，等待一会。
 
-4. 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。其中，`machine_owner: AccountId` 这里填入机器里内置的钱包地址; `machineId`填入你想绑定的机器 ID， 最后点击提交交易。
+### 1. 资金账户绑定控制账户
 
-   ![](bonding_machine.assets/火狐截图_2021-06-01T08-29-58.877Z.png)
++ 说明：
+
+  +  资金账户为机器中内置的，绑定机器时将从资金账户质押DBC，分发奖励时将发放到资金账户。
+  + 控制账户为管理人员，负责机器上机，维护等操作
+  + 资金账户必须指定一个控制账户。
+
++ 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`setController`方法，分别选择资金账户和控制账户，点击右下角绑定
+
+  ![image-20210621162810500](bonding_machine.assets/image-20210621162810500.png)
+
+### 2. 机器生成签名信息
+
++ 例如，
+
+  + 机器ID为`5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty`
+  + 机器ID对应的私钥为: `0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89`
+  + 资金账户为`5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc`
+
+  则生成签名的方法为（未来将提供网页工具）：
+
+  ```bash
+  node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc"
+  ```
+  
+
+生成结果：
+
+```
+### MSG: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
+### SignedBy: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
+### Signature: 0xa2dac9014f46b2190aefcac4ede674fdfff06564f7644dd8fa96d9748e3a53329fc5c028651a756e5e287927ea0d20fafb3fa8264dd8be46108b26a387915182
+```
+
+其中，Signature即为签名信息
+
+### 3. 机器提交签名信息，绑定资金账户
+
++ 说明：我们需要机器签名以确认机器对应的资金账户
+
++ 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`machineSetStash`方法，填入参数，提交交易即可。
+
+  ![image-20210621163934098](bonding_machine.assets/image-20210621163934098.png)
+
+### 4. 上线机器
+
+​	导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用控制账户，将MachineId与控制账户进行绑定即可。
+
+![image-20210621164107038](bonding_machine.assets/image-20210621164107038.png)
+
+
 
 ## 方式 2: 通过脚本添加
 
