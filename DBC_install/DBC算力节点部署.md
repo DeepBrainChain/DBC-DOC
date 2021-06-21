@@ -236,10 +236,6 @@ sudo systemctl enable libvirtd.service
 ## 八、创建dbc用户
 
 ```shell
-sudo wget http://111.44.254.179:22244/install_dbc_ry_machine.sh
-sudo chmod +x install_dbc_ry_machine.sh
-sudo bash install_dbc_ry_machine.sh
-
 sudo wget http://116.85.24.172:20444/static/add_dbc_user.sh
 sudo chmod +x add_dbc_user.sh
 sudo ./add_dbc_user.sh dbc
