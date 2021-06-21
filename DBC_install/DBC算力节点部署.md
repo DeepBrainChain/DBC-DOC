@@ -256,7 +256,7 @@ sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
 
->  输入您的钱包地址（如果机器被租用，dbc将直接转入该钱包地址，请确保地址信息正确）
+>  输入您的资金账户钱包地址（如果机器被租用，该钱包地址涉及dbc质押与收益的流动，请确保地址信息正确）
 > ![wallet](images/wallet.png)
 
 
