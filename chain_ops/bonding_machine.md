@@ -38,7 +38,6 @@
   ```bash
   node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc"
   ```
-  
 
 生成结果：
 
@@ -56,7 +55,9 @@
 
 + 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`machineSetStash`方法，填入参数，提交交易即可。
 
-  ![image-20210621163934098](bonding_machine.assets/image-20210621163934098.png)
++ 其中，msg参数，填写 [机器IDStash账户] 拼接而成的字符串；sig 参数填写通过机器私钥对字符串签名的结果。
+
+  ![image-20210622151757950](bonding_machine.assets/image-20210622151757950.png)
 
 ### 4. 上线机器
 
