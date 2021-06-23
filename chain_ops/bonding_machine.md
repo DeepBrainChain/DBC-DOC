@@ -28,6 +28,8 @@
 
 ### 2. 机器生成签名信息
 
+> 注意：由于DBC程序目前还没有将机器ID更新为类钱包形式，此次测试机器ID对应私钥请去/home/dbc/0.3.7.3/dbc_repo/dat/node.dat的node_private_key=取
+
 + 例如，
 
   + 机器ID为`5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty`
