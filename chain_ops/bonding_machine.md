@@ -73,6 +73,22 @@
 
 
 
+### 5. 查询与领取奖励
+
+#### 1. 查询奖励
+
+在开发者--链状态中选择：`onlineProfile`模块的`stashMachines`方法，参数填入**stash**账户（不是控制账户 ），你将能查到该stash账户获得奖励的详细信息。
+
+其中，`can_claim_reward`为能够领取的奖励，`left_reard`为之前每天获得奖励的剩余部分（剩下的75%，这75%将在随后的150天线性释放）。
+
+![image-20210623143656481](bonding_machine.assets/image-20210623143656481.png)
+
+#### 2. 领取奖励
+
+使用**控制账户**领取即可，奖励将发放到stash账户。
+
+![image-20210623144049700](bonding_machine.assets/image-20210623144049700.png)
+
 ## 方式 2: 通过脚本添加
 
 ```bash
@@ -102,6 +118,20 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
 # 委员会如何验证机器
 
 0. 成为委员会
+
+   可以通过社区投票参加委员会。
+
+   委员会需要提交用于信息加密的公钥，才能正常的派单与抢单。
+
+   ```bash
+   # 生成公钥，需要利用脚本，指定自己的私钥
+   
+   node gen_boxpubkey.js --key "0x868020ae0687dda7d57565093a69090211449845a7e11453612800b663307246"
+   ```
+
+   生成了公钥之后，到`committee` -- `committeeSetBoxPubkey` 提交交易进行设定。
+
+   ![image-20210623145108399](bonding_machine.assets/image-20210623145108399.png)
 
 1. 查看系统分配给自己的订单。导航到 `开发者`--`链状态`--`存储`，在其中选择`leaseCommittee`模块的`committeeMachine`存储，点击右侧的`+`号，可以看到委员会的订单情况。如果所示，该委员会有一个系统分配的订单
 
