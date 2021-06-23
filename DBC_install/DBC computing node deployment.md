@@ -246,10 +246,6 @@ sudo systemctl enable libvirtd.service
 ## Create a dbc user
 
 ```shell
-sudo wget http://111.44.254.179:22244/install_dbc_ry_machine.sh
-sudo chmod +x install_dbc_ry_machine.sh
-sudo bash install_dbc_ry_machine.sh
-
 sudo wget http://116.85.24.172:20444/static/add_dbc_user.sh
 sudo chmod +x add_dbc_user.sh
 sudo ./add_dbc_user.sh dbc
@@ -268,7 +264,6 @@ sudo mkdir install && cd install
 sudo wget http://111.44.254.179:22244/install_dbc_ry_machine.sh
 sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
-#During the installation process, there will be a selection path, select the /data folder (be sure to select /data, otherwise the virtual machine will not be successfully created)
 ```
 
 >  输入您的钱包地址（如果机器被租用，dbc将直接转入该钱包地址，请确保地址信息正确）
