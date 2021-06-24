@@ -1,6 +1,6 @@
 # Machine winding steps
 
-## Method 1: Binding via web wallet定
+## Method 1: Binding via web wallet
 
 ### 0. Preparation
 
