@@ -321,32 +321,5 @@ sudo systemctl restart dbc
 
 ## Machine on the chain
 
-### How to bind the machine to get online rewards
-
-#### Method 1: Binding via web wallet
-
-0. Before binding, please make sure that there is enough balance in the wallet. (Each card is estimated at 100,000 DBC).
-
-1. Open the settings page of the web wallet: `https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finnertest.dbcwallet.io#/settings/developer`
-
-2. Open `https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/types.json`, copy the content of `types.json`, and paste it to the web wallet settings page, click save .
-
-   ![](/home/heaven/Documents/DBC_install/images/火狐截图_2021-06-01T08-25-33.414Z.png)
-
-3. Refresh the page and wait a while.
-
-4. Navigate to: `Developer`--`Transaction`, and select the `bondMachine` method of the `onlineProfile` module as shown below. Among them, `machine_owner: AccountId` fill in the built-in wallet address in the machine; `machineId` fill in the machine ID you want to bind, and finally click to submit the transaction.
-
-   ![](/home/heaven/Documents/DBC_install/images/火狐截图_2021-06-01T08-29-58.877Z.png)
-
-#### Method 2: add via script
-
-```bash
-git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git
-cd DeepBrainChain-MainChain && checkout dev-example
-yarn install
-node sign_txs.js --port="wss://innertest.dbcwallet.io" --module onlineProfile --func bondMachine --key "sample split bamboo west visual approve brain fox arch impact relief smile" 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty 2gfpp3MAB4Aq2ZPEU72neZTVcZkbzDzX96op9d3fvi3
-```
-
-Among them, `--key` specifies the mnemonic phrase, and the last two parameters are the wallet address bound in the machine and the machine ID
+https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%BA%BF%E6%AD%A5%E9%AA%A4
 
