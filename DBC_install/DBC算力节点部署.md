@@ -309,31 +309,4 @@ sudo systemctl restart dbc
 
 ## 十五、机器上链
 
-### 如何绑定机器获得在线奖励
-
-#### 方式 1: 通过网页钱包绑定
-
-0. 绑定之前，请确保钱包中有足够的余额。（每张卡按 10 万 DBC 估计）。
-
-1. 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finnertest.dbcwallet.io#/settings/developer`
-
-2. 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
-
-   ![](images/火狐截图_2021-06-01T08-25-33.414Z.png)
-
-3. 刷新网页，等待一会。
-
-4. 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。其中，`machine_owner: AccountId` 这里填入机器里内置的钱包地址; `machineId`填入你想绑定的机器 ID， 最后点击提交交易。
-
-   ![](images/火狐截图_2021-06-01T08-29-58.877Z.png)
-
-#### 方式 2: 通过脚本添加
-
-```bash
-git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git
-cd DeepBrainChain-MainChain && checkout dev-example
-yarn install
-node sign_txs.js --port="wss://innertest.dbcwallet.io" --module onlineProfile --func bondMachine --key "sample split bamboo west visual approve brain fox arch impact relief smile" 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty 2gfpp3MAB4Aq2ZPEU72neZTVcZkbzDzX96op9d3fvi3
-```
-
-其中，`--key` 指定助记词，最后两个参数分别是机器中绑定的钱包地址，机器的 ID
+https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%BA%BF%E6%AD%A5%E9%AA%A4
