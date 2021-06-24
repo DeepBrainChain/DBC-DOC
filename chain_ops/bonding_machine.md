@@ -25,8 +25,14 @@
 + 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`setController`方法，分别选择资金账户和控制账户，点击右下角绑定
 
   ![image-20210621162810500](bonding_machine.assets/image-20210621162810500.png)
+  
+### 2. 上线机器
 
-### 2. 机器生成签名信息
+​	导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用控制账户，将MachineId与控制账户进行绑定即可。
+
+![image-20210621164107038](bonding_machine.assets/image-20210621164107038.png)
+
+### 3. 机器生成签名信息
 
 > 注意：由于DBC程序目前还没有将机器ID更新为类钱包形式，此次测试机器ID对应私钥请去/home/dbc/0.3.7.3/dbc_repo/dat/node.dat的node_private_key=取
 
@@ -57,7 +63,7 @@
 
 其中，Signature即为签名信息
 
-### 3. 机器提交签名信息，绑定资金账户
+### 4. 机器提交签名信息，绑定资金账户
 
 + 说明：我们需要机器签名以确认机器对应的资金账户
 
@@ -67,11 +73,7 @@
 
   ![image-20210622151757950](bonding_machine.assets/image-20210622151757950.png)
 
-### 4. 上线机器
 
-​	导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用控制账户，将MachineId与控制账户进行绑定即可。
-
-![image-20210621164107038](bonding_machine.assets/image-20210621164107038.png)
 
 
 
