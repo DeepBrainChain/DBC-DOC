@@ -32,9 +32,18 @@
 
 ![image-20210621164107038](bonding_machine.assets/image-20210621164107038.png)
 
+
+
+
 ### 3. 机器生成签名信息
 
-> 注意：由于DBC程序目前还没有将机器ID更新为类钱包形式，此次测试机器ID对应私钥请去/home/dbc/0.3.7.3/dbc_repo/dat/node.dat的node_private_key=取
+> 注意：由于DBC程序目前还没有将机器ID更新为类钱包形式，此次测试机器ID可以采用创建一个新的账户，用账户钱包地址作为机器id进行模拟测试，或者执行以下操作
+```shell
+sudo wget http://111.44.254.179:22244/subkey
+sudo chmod +x subkey
+./subkey
+```
+输出内容即有ID以及私钥，即可进行接下来的操作
 
 + 例如，
 
