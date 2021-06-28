@@ -309,7 +309,7 @@ sudo systemctl restart dbc
 ## 十五、查看机器是否正确加入到算力网络
 + 使用官方提供客户端节点查看
 + 矿池搭建客户端节点
-+ 以上两点详见：
++ 以上两点详见：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
 
 ## 十六、机器上链
 
