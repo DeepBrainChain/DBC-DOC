@@ -22,17 +22,15 @@
 
 > 当机器出现故障时，为了避免被举报，机器维护者需要及时声明**机器下线**，来及时处理机器问题。
 
-操作：`onlineProfile` -- `stakerReportOffline`
+操作：`onlineProfile` -- `controllerReportOffline`
 
-![image-20210628173113999](maintain_machine.assets/image-20210628173113999.png)
-
-
+![image-20210628174652781](maintain_machine.assets/image-20210628174652781.png)
 
 ### 声明机器上线
 
 > 当机器从故障中恢复后，需要及时声明机器上线。
 
-操作：`onlineProfile`--`stakerReportOnline`
+操作：`onlineProfile`--`controllerReportOnline`
 
-![image-20210628173157921](maintain_machine.assets/image-20210628173157921.png)
+![image-20210628174734910](maintain_machine.assets/image-20210628174734910.png)
 
