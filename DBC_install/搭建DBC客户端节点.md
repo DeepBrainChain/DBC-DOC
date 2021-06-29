@@ -12,8 +12,7 @@
 sudo wget http://116.85.24.172:20444/static/dbc-linux-client-0.3.7.3.tar.gz
 sudo tar -zxvf dbc-linux-client-0.3.7.3.tar.gz
 cd ipfs_repo
-sudo /bin/bash install_ipfs.sh go-ipfs_v0.4.15_linux-amd64.tar.gz
-cd dbc_repo
+
 
 #修改conf目录下的core.conf配置文件：
 rest_ip 改为0.0.0.0
