@@ -53,9 +53,9 @@ sudo chmod +x subkey
 机器私钥: 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89
 ```
 
-![image-20210629110344708](bonding_machine.assets/image-20210629110344708.png)我们需要用机器账户的私钥对`绑定资金账户的消息`进行签名，
+#### 使用机器私钥生成签名数据
 
-其中，`--msg` 指定需要签名的消息，内容为 `机器账户+资金账户`；`--key` 指定机器的私钥；`Signature:`后面生成的数据即为签名数据。
+使用下面的[脚本](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js)生成签名数据。其中，`--msg` 指定需要签名的消息，内容为 `机器账户+资金账户`；`--key` 指定机器的私钥；`Signature:`后面生成的数据即为签名数据。
 
 ```bash
 ❯ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
