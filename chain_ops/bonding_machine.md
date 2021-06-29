@@ -25,69 +25,60 @@
 
 + 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`setController`方法，分别选择资金账户和控制账户，点击右下角绑定
 
-  ![image-20210621162810500](bonding_machine.assets/image-20210621162810500.png)
-  
-### 2. 上线机器
+  ![image-20210629104434008](bonding_machine.assets/image-20210629104434008.png)
 
-​	导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用控制账户，将MachineId与控制账户进行绑定即可。
+  如图，BOB_STASH 账户(资金账户) 将 DAVE账户设置为了控制账户。
 
-![image-20210621164107038](bonding_machine.assets/image-20210621164107038.png)
+  BOB_STASH: 5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
 
+  DAVE: 5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy
+### 2. 机器生成签名消息
 
+> 需要使用机器私钥生成签名消息，发送到链上，以确认内置的资金账户。
+>
+> 注意：由于DBC程序目前还没有将机器ID更新为类钱包形式，此次测试机器ID可以采用`创建一个新的账户`，**用账户钱包地址作为机器id进行模拟测试**，或者执行以下操作生成机器ID：
 
+#### 生成机器ID
 
-### 3. 机器生成签名信息
-
-> 注意：由于DBC程序目前还没有将机器ID更新为类钱包形式，此次测试机器ID可以采用创建一个新的账户，用账户钱包地址作为机器id进行模拟测试，或者执行以下操作
-```shell
+```
 sudo wget http://111.44.254.179:22244/subkey
 sudo chmod +x subkey
-./subkey
+./subkey generate --scheme sr25519
 ```
-输出内容即有ID以及私钥，即可进行接下来的操作
 
-+ 例如，
-
-  + 机器ID为`5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty`
-  + 机器ID对应的私钥为: `0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89`
-  + 资金账户为`5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc`
-
-  则生成签名的方法为（未来将提供网页工具）：
-
-  ```bash
-  # 注意：请自行安装node.js v14 和 yarn
-  git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git
-  cd DeepBrainChain-MainChain && git checkout feature/staking_v3.0.0_online_profile && cd scripts/test_script
-  yarn
-  
-  node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc"
-  ```
-
-生成结果：
+例如，我们通过上述步骤，生成了机器的账户
 
 ```
+机器账户: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
+机器私钥: 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89
+```
+
+![image-20210629110344708](bonding_machine.assets/image-20210629110344708.png)我们需要用机器账户的私钥对`绑定资金账户的消息`进行签名，
+
+其中，`--msg` 指定需要签名的消息，内容为 `机器账户+资金账户`；`--key` 指定机器的私钥；`Signature:`后面生成的数据即为签名数据。
+
+```bash
+❯ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
 ### MSG: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
 ### SignedBy: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
-### Signature: 0xa2dac9014f46b2190aefcac4ede674fdfff06564f7644dd8fa96d9748e3a53329fc5c028651a756e5e287927ea0d20fafb3fa8264dd8be46108b26a387915182
+### Signature: 0x34693c10c3e828a44bc8fbce246cfb0ee6f8a079a178a251dc11921ea830a03e39d2bb0b18c7baaa72c8679e377288b8142d2bb3deaefc5f43ba39ad5965168b
 ```
 
-其中，Signature即为签名信息
+#### 使用控制账户`上线机器`
 
-### 4. 机器提交签名信息，绑定资金账户
+现在，我们可以通过控制账户，把上一步骤产生的签名消息广播出去，进行机器上链的操作。
 
-+ 说明：我们需要机器签名以确认机器对应的资金账户
+导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用控制账户，将`MachineId`与控制账户进行绑定即可。
 
-+ 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`machineSetStash`方法，填入参数，提交交易即可。
+![image-20210629105837275](bonding_machine.assets/image-20210629105837275.png)
 
-+ 其中，msg参数，填写 [机器IDStash账户] 拼接而成的字符串；sig 参数填写通过机器私钥对字符串签名的结果。
+#### 控制账户添加机器信息
 
-  ![image-20210622151757950](bonding_machine.assets/image-20210622151757950.png)
+控制账户还需要补充机器信息：
 
+![image-20210629110250436](bonding_machine.assets/image-20210629110250436.png)
 
-
-
-
-### 5. 查询与领取奖励
+### 3. 查询与领取奖励
 
 #### 1. 查询奖励
 
@@ -104,6 +95,8 @@ sudo chmod +x subkey
 ![image-20210623144049700](bonding_machine.assets/image-20210623144049700.png)
 
 ## 方式 2: 通过脚本添加
+
+TODO
 
 ```bash
 git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git
