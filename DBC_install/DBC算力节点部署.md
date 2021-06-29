@@ -306,7 +306,11 @@ sudo systemctl restart dbc
 > 如果GPU部分显示为N/A ，可以忽略。其他部分显示N/A或空，请手动改正后重启DBC
 
 
+## 十五、查看机器是否正确加入到算力网络
++ 使用官方提供客户端节点查看
++ 矿池搭建客户端节点
++ 以上两点详见：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
 
-## 十五、机器上链
+## 十六、机器上链
 
 https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%BA%BF%E6%AD%A5%E9%AA%A4
