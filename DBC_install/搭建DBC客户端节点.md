@@ -11,7 +11,7 @@
 ```shell
 sudo wget http://116.85.24.172:20444/static/dbc-linux-client-0.3.7.3.tar.gz
 sudo tar -zxvf dbc-linux-client-0.3.7.3.tar.gz
-cd ipfs_repo
+cd 0.3.7.3/dbc_repo/
 
 
 #修改conf目录下的core.conf配置文件：
@@ -29,5 +29,5 @@ rest_ip 改为0.0.0.0
 ## 4.通过HTTP请求查看功能节点是否正确加入到网络（通过浏览器访问）
 
 + 官方提供的节点1：http://111.44.254.162:41107/api/v1/mining_nodes/<机器ID>（暂时，公测时会更新）
-+ 矿池成功搭建后：http://<服务器ip>:41107/api/v1/mining_nodes/<机器ID>
++ 矿池成功搭建后：http://<客户端服务器ip>:41107/api/v1/mining_nodes/<机器ID>
 
