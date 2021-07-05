@@ -274,7 +274,7 @@ sudo systemctl status dbc
 ## 十一、下载镜像模板（请放置于/data目录下，dbc启动虚拟机会去/data目录搜寻）
 
 http://111.44.254.179:22244/ubuntu-img/ubuntu.qcow2
-
+备用网站：http://111.44.254.164:22244/
 
 
 ## 十二、备份机器id以及私钥(非常重要)
