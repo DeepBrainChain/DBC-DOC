@@ -44,12 +44,19 @@
 sudo wget http://111.44.254.179:22244/subkey
 sudo chmod +x subkey
 ./subkey generate --scheme sr25519
+
+# 生成内容示例：
+Secret seed:       0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89    ## 机器私钥（签名要用）
+Public key (hex):  0x8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48    ## 机器ID (不包含0x)
+Public key (SS58): 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
+Account ID:        0x8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+SS58 Address:      5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
 ```
 
 例如，我们通过上述步骤，生成了机器的账户
 
 ```
-机器账户: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
+机器ID: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
 机器私钥: 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89
 ```
 
@@ -58,10 +65,10 @@ sudo chmod +x subkey
 使用下面的[脚本](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js)生成签名数据。其中，`--msg` 指定需要签名的消息，内容为 `机器账户+资金账户`；`--key` 指定机器的私钥；`Signature:`后面生成的数据即为签名数据。
 
 ```bash
-❯ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
-### MSG: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
-### SignedBy: 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
-### Signature: 0x34693c10c3e828a44bc8fbce246cfb0ee6f8a079a178a251dc11921ea830a03e39d2bb0b18c7baaa72c8679e377288b8142d2bb3deaefc5f43ba39ad5965168b
+❯ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
+### Message: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
+### Signer: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
+### Signature: 0x5cc8b4c49b244d7c071b124ef68119d7549dd805ea43f69e3c142fd5909f926041a9cad93b16085d72431df2d1164e7911085423bca16625295583686f2fce8c
 ```
 
 #### 使用控制账户`上线机器`
@@ -70,13 +77,13 @@ sudo chmod +x subkey
 
 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用控制账户，将`MachineId`与控制账户进行绑定即可。
 
-![image-20210629105837275](bonding_machine.assets/image-20210629105837275.png)
+![image-20210707140400114](bonding_machine.assets/image-20210707140400114.png)
 
 #### 控制账户添加机器信息
 
 控制账户还需要补充机器信息：
 
-![image-20210629110250436](bonding_machine.assets/image-20210629110250436.png)
+![image-20210707143303202](bonding_machine.assets/image-20210707143303202.png)
 
 ### 3. 查询与领取奖励
 
