@@ -18,51 +18,41 @@
 + 说明：
 
   + 为了您的账户资金安全，我们强烈建议使用多签账户作为资金账户，关于多签账户，请转到https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E5%A4%9A%E9%87%8D%E7%AD%BE%E5%90%8D%E8%B4%A6%E6%88%B7.md 了解
-  +  资金账户为机器中内置的，绑定机器时将从资金账户质押DBC，分发奖励时将发放到资金账户。
-  + 控制账户为管理人员，负责机器上机，维护等操作
-  + 资金账户必须指定一个控制账户。
-  + 控制账户要有少量的DBC，链上操作产生的手续费会从控制账户扣除。
+  +  `资金账户`为机器中内置的，绑定机器时将从`资金账户`质押DBC，分发奖励时将发放到`资金账户`。
+  + `控制账户`为管理人员，负责机器上机，维护等操作
+  + `资金账户`必须指定一个`控制账户`。
+  + `控制账户`要有一些的DBC，链上操作产生的手续费会从`控制账户`扣除。
 
-+ 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`setController`方法，分别选择资金账户和控制账户，点击右下角绑定
++ 导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`setController`方法，分别选择`资金账户`和`控制账户`，点击右下角绑定
 
   ![image-20210629104434008](bonding_machine.assets/image-20210629104434008.png)
 
-  如图，BOB_STASH 账户(资金账户) 将 DAVE账户设置为了控制账户。
-
-  BOB_STASH: 5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc
-
-  DAVE: 5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy
+  > 如上图，BOB_STASH 账户(`资金账户`) 将 DAVE账户设置为了`控制账户`。
+  >
+  > `资金账户`: `5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc`
+  >
+  > `控制账户`: `5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy`
 ### 2. 机器生成签名消息
 
 > 需要使用机器私钥生成签名消息，发送到链上，以确认内置的资金账户。
->
-> 注意：由于DBC程序目前还没有将机器ID更新为类钱包形式，此次测试机器ID可以采用`创建一个新的账户`，**用账户钱包地址作为机器id进行模拟测试**，或者执行以下操作生成机器ID：
 
-#### 生成机器ID
+#### 查询`机器ID`和`机器私钥`
 
-```
-sudo wget http://111.44.254.179:22244/subkey
-sudo chmod +x subkey
-./subkey generate --scheme sr25519
-
-# 生成内容示例：
-Secret seed:       0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89    ## 机器私钥（签名要用）
-Public key (hex):  0x8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48    ## 机器ID (不包含0x)
-Public key (SS58): 5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
-Account ID:        0x8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
-SS58 Address:      5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
+```shell
+# 机器ID和私钥在dbc安装程序的目录下，如：
+# /home/dbc/0.3.7.3/dbc_repo/dat/node.dat
+# 其内容为：
+node_id=8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48			# 机器ID
+node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89	# 机器私钥
 ```
 
-例如，我们通过上述步骤，生成了机器的账户
+#### 使用`机器私钥`生成签名数据
 
-```
-机器ID: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
-机器私钥: 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89
-```
+使用下面的[脚本](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js)生成签名数据。
 
-#### 使用机器私钥生成签名数据
+其中，`--msg` 指定需要签名的消息，消息内容为 `机器ID+资金账户`；`--key` 指定`机器私钥`, **key前面加上0x**；
 
-使用下面的[脚本](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js)生成签名数据。其中，`--msg` 指定需要签名的消息，内容为 `机器账户+资金账户`；`--key` 指定机器的私钥；`Signature:`后面生成的数据即为签名数据。
+`Signature:`后的数据即为**签名数据**。
 
 ```bash
 ❯ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
@@ -71,17 +61,17 @@ SS58 Address:      5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
 ### Signature: 0x5cc8b4c49b244d7c071b124ef68119d7549dd805ea43f69e3c142fd5909f926041a9cad93b16085d72431df2d1164e7911085423bca16625295583686f2fce8c
 ```
 
-#### 使用控制账户`上线机器`
+#### 使用`控制账户`上线机器
 
-现在，我们可以通过控制账户，把上一步骤产生的签名消息广播出去，进行机器上链的操作。
+现在，我们需要通过`控制账户`，把上一步骤产生的***签名数据***广播出去。
 
-导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用控制账户，将`MachineId`与控制账户进行绑定即可。
+导航到：`开发者`--`交易`，如下图选择`onlineProfile`模块的`bondMachine`方法。使用`控制账户`，将`机器ID`(`MachineId`)与`控制账户`进行绑定即可。参数填写如下图：
 
 ![image-20210707140400114](bonding_machine.assets/image-20210707140400114.png)
 
-#### 控制账户添加机器信息
+#### `控制账户`添加机器信息
 
-控制账户还需要补充机器信息：
+`控制账户`还需要补充机器信息：
 
 ![image-20210707143303202](bonding_machine.assets/image-20210707143303202.png)
 
@@ -89,7 +79,7 @@ SS58 Address:      5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
 
 #### 1. 查询奖励
 
-在开发者--链状态中选择：`onlineProfile`模块的`stashMachines`方法，参数填入**stash**账户（不是控制账户 ），你将能查到该stash账户获得奖励的详细信息。
+在开发者--链状态中选择：`onlineProfile`模块的`stashMachines`方法，参数填入**`资金账户`**，你将能查到该`资金账户`获得奖励的详细信息。
 
 其中，`can_claim_reward`为能够领取的奖励，`left_reard`为之前每天获得奖励的剩余部分（剩下的75%，这75%将在随后的150天线性释放）。
 
@@ -97,7 +87,7 @@ SS58 Address:      5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty
 
 #### 2. 领取奖励
 
-使用**控制账户**领取即可，奖励将发放到stash账户。
+使用**控制账户**领取即可，奖励将发放到**`资金账户`**。
 
 ![image-20210623144049700](bonding_machine.assets/image-20210623144049700.png)
 
