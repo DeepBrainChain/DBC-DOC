@@ -71,7 +71,7 @@ Now, we need to broadcast the ***signature data*** generated in the previous ste
 
 Navigate to: `Developer`--`Transaction`, and select the `bondMachine` method of the `onlineProfile` module as shown below. Use `Control Account` to bind `Machine ID` (`MachineId`) with `Control Account`. Fill in the parameters as shown below:![image-20210707140400114](bonding_machine.assets/image-20210707140400114.png)
 
-+ Query whether the machine is successfully bound:
+#### Query whether the machine is successfully bound:
 
   After completing this step, you can query the machines in the system through `Developer`--`Chain Status`--`onlineProfile`--`liveMachines`. As shown in the figure below, a machine is queried that has been bound. Next, you need to add machine information
 
