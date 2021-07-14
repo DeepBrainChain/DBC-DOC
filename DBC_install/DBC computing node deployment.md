@@ -285,13 +285,14 @@ sudo systemctl status dbc
 
 ## Download the mirror template
 
-Under production optimization, this step can be skipped temporarily, and the latest mirroring will be synchronized after completion
++ http://111.44.254.179:22244/ubuntu-img/ 
 
++ Alternate site：http://111.44.254.164:22244/ubuntu-img/
 
 
 ## Back up the machine id and private key (very important)
 
-Back up the contents of the following file: vi /home/dbc/0.3.7.3/dbc_repo/dat/node.dat, put it in a safe place, and use it later if you reinstall the system or reinstall DBC
+Back up the contents of the following file: ` /home/dbc/0.3.7.3/dbc_repo/dat/node.dat`, put it in a safe place, and use it later if you reinstall the system or reinstall DBC
 
 
 
@@ -301,7 +302,7 @@ Back up the contents of the following file: vi /home/dbc/0.3.7.3/dbc_repo/dat/no
 
 
 
-## Parameter check
+## Parameter check(Ignore it temporarily, it is being revised again, and the program package has been temporarily removed)
 
 ```shell
 #Check the memory, hard disk, graphics card, IP, if you do not see the content of the following picture on the website, it means that the system does not detect the memory or hard disk, you need to manually execute a check command:
