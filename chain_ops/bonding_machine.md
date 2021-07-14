@@ -32,6 +32,10 @@
   > `资金账户`: `5HpG9w8EBLe5XCrbczpwq5TSXvedjrBGCwqxK1iQ7qUsSWFc`
   >
   > `控制账户`: `5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy`
+  
++ **查询资金账户与控制账户是否绑定成功**：如下图，当资金账户绑定成功控制账户后，可以通过`开发者`--`链状态`，选择`onlineProfile`模块的`controllerStash`存储，来查询`控制账户`对应的资金账户。下图，查询到了一个控制账户对应的资金账户。
+
+  ![image-20210714140945243](bonding_machine.assets/image-20210714140945243.png)
 ### 2. 机器生成签名消息
 
 > 需要使用机器私钥生成签名消息，发送到链上，以确认内置的资金账户。
@@ -69,11 +73,25 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 ![image-20210707140400114](bonding_machine.assets/image-20210707140400114.png)
 
++ 查询机器是否绑定成功：
+
+  完成这一步后，可以通过`开发者`--`链状态`--`onlineProfile`--`liveMachines`查询系统中的机器。如下图，查询到一台机器已被绑定。接下来需要补充机器信息
+
+  ![image-20210714141352887](bonding_machine.assets/image-20210714141352887.png)
+
 #### `控制账户`添加机器信息
 
 `控制账户`还需要补充机器信息：
 
 ![image-20210707143303202](bonding_machine.assets/image-20210707143303202.png)
+
++ 参数说明：（TODO）
+  + upload_net: 上传带宽。
+  + download_net: 下载带宽。
+  + longitude: 经度。东经为正，西经为负。
+  + latitude:  纬度。北纬为正，南纬为负。
+  + 机房信息，可以根据情况，从以下几种中选择：
+  + 镜像信息，从以下几种中选择：
 
 ### 3. 查询与领取奖励
 
