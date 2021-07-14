@@ -322,7 +322,7 @@ sudo systemctl restart dbc
 ## Check whether the machine is correctly added to the computing power network
 + Use the official client node to view
 + Mine pool build client node
-+ For the above two points, please see: https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
++ For the above two points, please see: https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/DBC_client_node_construction_steps_english.md
 + About client nodes: It is recommended that each mining pool set up 2 or more client nodes to ensure that the network can still be normal when the official nodes or other mining pools provide nodes are offline. If there are too few client nodes in the network or hang Too much drop will affect the rental situation of the machine. The client node construction can start a container to deploy on other servers without taking up too much resources.
 
 
