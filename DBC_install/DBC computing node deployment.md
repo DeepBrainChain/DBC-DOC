@@ -267,7 +267,7 @@ sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
 
 >  输入您的钱包地址（如果机器被租用，dbc将直接转入该钱包地址，请确保地址信息正确）
->  ![wallet](/home/heaven/Documents/DBC_install/images/wallet.png)
+>  ![wallet](images/wallet.png)
 
 >The first item in the picture is the machine id and the second item enters your wallet address
 
