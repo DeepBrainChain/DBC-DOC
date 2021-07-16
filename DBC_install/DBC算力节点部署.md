@@ -2,7 +2,7 @@
 
 ## 一、安装前准备(基于已配置好固定公网ip地址），部署KVM安装环境
 
-### 注意：系统采用ubuntu18.04 LTS，并在开始前请卸载掉已经安装的显卡驱动，本操作不可带有显卡驱动
+### 注意：系统采用ubuntu18.04 LTS或者20.04LTS,，并在开始前请卸载掉已经安装的显卡驱动，本操作不可带有显卡驱动
 
 ```shell
 sudo apt-get update
@@ -63,6 +63,26 @@ intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
 #在GRUB_CMDLINE_LINUX字段添加 
 intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
 ```
+***如果您是20.04系统，操作以下内容即可，无需再去操作其他关于vfio-pci步骤***
+```shell
+#查询显卡ID
+lspci -nnv | grep NVIDIA
+复制显卡id，例如10de:2231  10de:1aef，重复内容仅保留一次即可
+
+#修改内核文件
+sudo vim /etc/default/grub
+#在GRUB_CMDLINE_LINUX_DEFAULT字段添加 
+quiet splash intel_iommu=on kvm.ignore_msrs=1 vfio-pci.ids=<显卡id，中间以逗号隔开>
+
+#更新内核
+sudo update-grub
+
+#重启机器
+#查询显卡占用情况
+lspci -vv -s <显卡PCI接口> | grep driver
+(显示vfio-pci即为正常，非vfio-pci请返回查看grub文件是否写对）
+```
+***20.04LTS系统显卡隔离步骤到此结束，请前往步骤7继续操作***
 
 ### 2、配置模块文件
 
