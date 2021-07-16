@@ -51,19 +51,7 @@ sudo mount -a
 > KVM acceleration can be used
 > 表示可以进行后续操作，如果显示与其不相符，请检查VT-d是否正确开启
 
-## 四、启用系统分组
-
-### 1、配置intel_iommu
-
-```shell
-sudo vim /etc/default/grub
-
-#在GRUB_CMDLINE_LINUX_DEFAULT字段添加 
-intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
-#在GRUB_CMDLINE_LINUX字段添加 
-intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
-```
-***如果您是20.04系统，操作以下内容即可，无需再去操作其他关于vfio-pci步骤***
+***如果您是20.04系统，操作以下内容即可，无需再去操作其他关于vfio-pci步骤，如果您是ubuntu18.04系统，请按照第四步开始操作***
 ```shell
 #查询显卡ID
 lspci -nnv | grep NVIDIA
@@ -83,6 +71,20 @@ lspci -vv -s <显卡PCI接口> | grep driver
 (显示vfio-pci即为正常，非vfio-pci请返回查看grub文件是否写对）
 ```
 ***20.04LTS系统显卡隔离步骤到此结束，请前往步骤7继续操作***
+
+
+## 四、启用系统分组
+
+### 1、配置intel_iommu
+
+```shell
+sudo vim /etc/default/grub
+
+#在GRUB_CMDLINE_LINUX_DEFAULT字段添加 
+intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
+#在GRUB_CMDLINE_LINUX字段添加 
+intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
+```
 
 ### 2、配置模块文件
 
