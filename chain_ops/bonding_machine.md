@@ -140,4 +140,4 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
 + 查看资金账户下上链的机器
  + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`stashMachines`
 + 查看控制账户下上链的机器
- + + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`controllerMachines`
+ + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`controllerMachines`
