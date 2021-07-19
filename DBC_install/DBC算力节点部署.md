@@ -250,7 +250,7 @@ libvirtd_opts="-l"   #这个是小写L
 
 ### 2、启动libvirtd并设置开机自启
 
-+ sudo systemctl start libvirtd.service
++ sudo systemctl restart libvirtd.service
 + sudo systemctl enable libvirtd.service
 
 
