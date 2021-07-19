@@ -245,7 +245,7 @@ sudo vim /etc/libvirt/libvirtd.conf
 
 sudo vim /etc/default/libvirtd
 #对应修改为如下配置
-libvirtd_opts="-l"
+libvirtd_opts="-l"   #这个是小写L
 ```
 
 ### 2、启动libvirtd并设置开机自启
