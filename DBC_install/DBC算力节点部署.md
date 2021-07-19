@@ -231,7 +231,7 @@ lspci -vv -s 17:00.0 | grep driver
 
 
 
-## 七、确认机器显卡被vfio-pci占用后，启动libvirtd服务并设置开机自启
+## 七、确认机器显卡被vfio-pci占用后，启动libvirtd服务并设置开机自启(这一步配置非常重要）
 
 ### 1、开启virt tcp监听服务：
 
@@ -248,10 +248,11 @@ sudo vim /etc/default/libvirtd
 libvirtd_opts="-l"   #这个是小写L
 ```
 
-### 2、启动libvirtd并设置开机自启
+### 2、启动libvirtd并设置开机自启&检查服务状态
 
 + sudo systemctl restart libvirtd.service
 + sudo systemctl enable libvirtd.service
++ systemctl status libvirtd (看看是否有/usr/sbin/libvirtd -l，确认有即成功）
 
 
 
