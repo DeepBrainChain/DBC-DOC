@@ -239,21 +239,30 @@ lspci -vv -s 17:00.0 | grep driver
 sudo vim /etc/libvirt/libvirtd.conf
 #箭头后为修改后的内容：去掉这三行内容前的#，sasl改为none
 
-#listen_tls = 0	=======>	listen_tls = 0
-#listen_tcp = 1	=======>	listen_tcp = 1
+找到下边这2行，去掉开头的#号：
+#listen_tls = 0
+#listen_tcp = 1
+
+找到这一行，去掉开头#号，并且将sasl改为none：
 #auth_tcp = "sasl"	======>	auth_tcp = "none"
 
 sudo vim /etc/default/libvirtd
-#对应修改为如下配置
-libvirtd_opts="-l"   #这个是小写L
+#对应修改为如下配置（这个是小写L）
+libvirtd_opts="-l"
 ```
+
+对于ubuntu 20.04，需要执行下边这一步：
+systemctl mask libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket libvirtd-tls.socket libvirtd-tcp.socket
 
 ### 2、启动libvirtd并设置开机自启&检查服务状态
 
 + sudo systemctl restart libvirtd.service
 + sudo systemctl enable libvirtd.service
-+ systemctl status libvirtd (看看是否有/usr/sbin/libvirtd -l，确认有即成功）
++ systemctl status libvirtd
 
+### 3、测试libvirtd是否启动成功
+virsh connect qemu+tcp://localhost:16509/system
+如果没有输出错误，就是正常了；
 
 
 ## 八、创建dbc用户
