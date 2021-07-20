@@ -236,8 +236,8 @@ lspci -vv -s 17:00.0 | grep driver
 ### 1、开启virt tcp监听服务：
 
 ```shell
+修改配置文件：
 sudo vim /etc/libvirt/libvirtd.conf
-#箭头后为修改后的内容：去掉这三行内容前的#，sasl改为none
 
 找到下边这2行，去掉开头的#号：
 #listen_tls = 0
