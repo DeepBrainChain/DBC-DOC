@@ -249,10 +249,10 @@ sudo vim /etc/libvirt/libvirtd.conf
 sudo vim /etc/default/libvirtd
 #对应修改为如下配置（这个是小写L）
 libvirtd_opts="-l"
-```
 
 对于ubuntu 20.04，需要执行下边这一步：
 systemctl mask libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket libvirtd-tls.socket libvirtd-tcp.socket
+```
 
 ### 2、启动libvirtd并设置开机自启&检查服务状态
 
@@ -261,8 +261,8 @@ systemctl mask libvirtd.socket libvirtd-ro.socket libvirtd-admin.socket libvirtd
 + systemctl status libvirtd
 
 ### 3、测试libvirtd是否启动成功
-virsh connect qemu+tcp://localhost:16509/system
-如果没有输出错误，就是正常了；
++ virsh connect qemu+tcp://localhost:16509/system
++ 如果没有输出错误，就说明启动成功了；
 
 
 ## 八、创建dbc用户
