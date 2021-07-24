@@ -339,9 +339,8 @@ sudo systemctl restart dbc
 
 
 ## 十五、查看机器是否正确加入到算力网络
-+ 使用官方提供客户端节点查看
 + 矿池搭建客户端节点
-+ 以上两点详见：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
++ 详见：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
 + 关于客户端节点：建议每家矿池搭建2个及以上客户端节点，保证在官方提供节点或者其他矿池提供节点掉线情况下依旧可以保证网络正常，如果网络中客户端节点过少或者挂掉过多，会影响机器出租情况。客户端节点搭建可以在其他服务器启动一个容器来部署，并不会占用太多资源。
 ## 十六、机器上链
 
