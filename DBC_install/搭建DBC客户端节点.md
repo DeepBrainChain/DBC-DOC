@@ -31,4 +31,6 @@ rest_ip 改为0.0.0.0
 
 + 安装postman客户端
 + 导入以下地址json查询
-+ 
++ https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/deepbrainchain.postman_collection.json
++ 操作方法：将以上json内容或文件保存下来，然后打开postman选择file-----import导入
++ 查询所有机器不需要加任何参数即可使用，查机器id详细信息选择post请求链接下方的***body***，peer_nodes_list下输入机器id发送即可查询
