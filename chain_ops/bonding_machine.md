@@ -75,7 +75,7 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 #### 查询机器是否绑定成功：
 
-  完成这一步后，可以通过`开发者`--`链状态`--`onlineProfile`--`liveMachines`查询系统中的机器。如下图，查询到一台机器已被绑定。接下来需要补充机器信息
+  完成这一步后，可以通过`开发者`--`链状态`--`onlineProfile`--`liveMachines`，点右边的**+**查询系统中的机器。如下图，查询到一台机器已被绑定。接下来需要补充机器信息
 
   ![image-20210714141352887](bonding_machine.assets/image-20210714141352887.png)
 
