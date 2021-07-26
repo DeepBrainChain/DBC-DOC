@@ -75,7 +75,7 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 #### 查询机器是否绑定成功：
 
-  完成这一步后，可以通过`开发者`--`链状态`--`onlineProfile`--`liveMachines`，点右边的**+**查询系统中的机器。如下图，查询到一台机器已被绑定。接下来需要补充机器信息
+  完成这一步后，可以通过`开发者`--`链状态`--`onlineProfile`--`liveMachines`查询系统中的机器。如下图，查询到一台机器已被绑定。接下来需要补充机器信息
 
   ![image-20210714141352887](bonding_machine.assets/image-20210714141352887.png)
 
@@ -93,7 +93,12 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
   + 机房信息，可以根据情况，从以下几种中选择：（中国移动：China Mobile ， 中国联通：China Unicom ， 中国电信： China Telecom ， 海外运营商根据实际名称填写）
   + 镜像信息，从以下几种中选择：（ubuntu ， ubuntu-proofs）
 
-### 3. 查询与领取奖励
+### 3.查询机器链上状态信息
++ 导航到`开发者`----`链状态`----`onlineprofile`----`machinesInfo(MachineId): MachineInfo`
+  + 如果想查询单台机器在`MachineId`处填入机器id即可查询对应信息
+  + 如果想查询多台机器信息可以采用上方单台查询方案也可以关闭机器ID后面的***包括选项***，然后点击 + 进行查询，筛查
+
+### 4. 查询与领取奖励
 
 #### 1. 查询奖励
 
@@ -141,3 +146,7 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
  + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`stashMachines`
 + 查看控制账户下上链的机器
  + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`controllerMachines`
+
+## 机器下线
++ 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOnline`----`输入机器id`----`提交交易`
++ 注意，发起者需要是控制账户
