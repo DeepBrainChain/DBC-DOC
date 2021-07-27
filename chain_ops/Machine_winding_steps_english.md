@@ -54,6 +54,14 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 Use the following [script](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js) to generate signature data.
 
+```shell
+#Instructions
+1. Install nodejs 14 on the linux server (the version must be 14, otherwise there will be other errors, please Google for the installation method)
+2. Clone script: git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git -b feature/staking_v3.0.0_online_profile
+3. Installation: cd DeepBrainChain-MainChain/scripts/test_script && npm install
+4. Execute the script
+```
+
 Among them, `--msg` specifies the message that needs to be signed, and the message content is `machine ID+fund account`; `--key` specifies `machine private key`, and **key is prefixed with 0x**;
 
 The data after `Signature:` is the **signature data**.
