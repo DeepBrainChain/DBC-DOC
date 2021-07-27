@@ -53,6 +53,13 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 #### 使用`机器私钥`生成签名数据
 
 使用下面的[脚本](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js)生成签名数据。
+```shell
+#使用方法
+1.在linux服务器安装nodejs 14（版本一定要是14，不然会有其他报错，安装方法请自行百度）
+2.克隆脚本： git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git -b feature/staking_v3.0.0_online_profile
+3.安装：cd DeepBrainChain-MainChain/scripts/test_script && npm install
+4.执行脚本
+```
 
 其中，`--msg` 指定需要签名的消息，消息内容为 `机器ID+资金账户`；`--key` 指定`机器私钥`, **key前面加上0x**；
 
@@ -147,6 +154,10 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
 + 查看控制账户下上链的机器
  + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`controllerMachines`
 
-## 机器下线
-+ 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOnline`----`输入机器id`----`提交交易`
-+ 注意，发起者需要是控制账户
+## 机器下线与重新上线
++ 机器下线
+  + 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOffline`----`输入机器id`----`提交交易`
+  + 注意，发起者需要是控制账户
++ 机器重新上线
+  + 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOnline`----`输入机器id`----`提交交易`
+> 机器重新上线时还需重新提交机器信息，请确保经纬度信息正确。
