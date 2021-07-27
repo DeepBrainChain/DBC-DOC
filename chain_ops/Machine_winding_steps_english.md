@@ -151,5 +151,6 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
 + Machine offline
    + Navigate to `Developer`----`Transaction`----`onlineprofile`----`controllerReportOffline`----`Enter machine id`----`Submit transaction`
    + Note that the initiator needs to be a controlling account
+![img](bonding_machine.assets/offline.png)
 + The machine is back online
    + Navigate to `Developer`----`Transaction`----`onlineprofile`----`controllerReportOnline`----`Enter machine id`----`Submit transaction`
