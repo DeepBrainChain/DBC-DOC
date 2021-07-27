@@ -132,3 +132,16 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
 node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlineProfile --func bondMachine \
     --key $dave_key $bob
 ```
+
+## Query the machine bound to the account
++ View the machines on the chain under the fund account
+  + Navigate to `Developer`----`Chain Status`----`Storage`----`onlineProfile`----`stashMachines`
++ View the machines on the chain under the control account
+  + Navigate to `Developer`----`Chain Status`----`Storage`----`onlineProfile`----`controllerMachines`
+
+## Machine offline and back online
++ Machine offline
+   + Navigate to `Developer`----`Transaction`----`onlineprofile`----`controllerReportOffline`----`Enter machine id`----`Submit transaction`
+   + Note that the initiator needs to be a controlling account
++ The machine is back online
+   + Navigate to `Developer`----`Transaction`----`onlineprofile`----`controllerReportOnline`----`Enter machine id`----`Submit transaction`
