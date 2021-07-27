@@ -68,8 +68,8 @@ sudo update-grub
 #重启机器
 #查询显卡占用情况
 lspci -vv -s <显卡PCI接口> | grep driver
-(显示vfio-pci即为正常，非vfio-pci请返回查看grub文件是否写对）
 ```
+> 显示vfio-pci即为正常，非vfio-pci请返回查看grub文件是否写对或者***按照第六步2步骤进行手动绑定***
 ***20.04LTS系统显卡隔离步骤到此结束，请前往步骤7继续操作***
 
 
@@ -231,7 +231,7 @@ lspci -vv -s 17:00.0 | grep driver
 
 
 
-## 七、确认机器显卡被vfio-pci占用后，启动libvirtd服务并设置开机自启(这一步配置非常重要）
+## 七、确认机器显卡被vfio-pci占用后，启动libvirtd服务并设置开机自启(这一步配置非常重要***如果没有正确配置将无法正确接收请求，会直接影响机器在链状态，影响出租，造成损失***）
 
 ### 1、开启virt tcp监听服务：
 
@@ -321,7 +321,7 @@ http://111.44.254.179:22244/ubuntu-img/
 
 
 
-## 十四、参数检查（暂时忽略，正在重新修改，程序包内暂时去掉了）
+## 十四、参数检查
 
 ```shell
 #检查内存、硬盘、显卡、IP，如果在网站上没有看到下图的内容，说明系统没有检测到内存或者硬盘，需要手动执行一次检查命令：
@@ -340,8 +340,10 @@ sudo systemctl restart dbc
 
 ## 十五、查看机器是否正确加入到算力网络
 + 矿池搭建客户端节点
-+ 详见：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
++ 详细内容请到链接查看：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
 + 关于客户端节点：建议每家矿池搭建2个及以上客户端节点，保证在官方提供节点或者其他矿池提供节点掉线情况下依旧可以保证网络正常，如果网络中客户端节点过少或者挂掉过多，会影响机器出租情况。客户端节点搭建可以在其他服务器启动一个容器来部署，并不会占用太多资源。
++ 客户端程序会进行修改，届时可以安装在与算力节点同一个机器。
 ## 十六、机器上链
 
 https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%BA%BF%E6%AD%A5%E9%AA%A4
+
