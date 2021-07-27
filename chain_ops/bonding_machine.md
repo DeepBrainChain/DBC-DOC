@@ -158,6 +158,7 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
 + 机器下线
   + 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOffline`----`输入机器id`----`提交交易`
   + 注意，发起者需要是控制账户
+![img](bonding_machine.assets/offline.png)
 + 机器重新上线
   + 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOnline`----`输入机器id`----`提交交易`
 > 机器重新上线时还需重新提交机器信息，请确保经纬度信息正确。
