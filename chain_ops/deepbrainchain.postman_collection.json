@@ -20,7 +20,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://111.44.254.162:41107/api/v1/mining_nodes",
+					"raw": "http://<client ip address>:41107/api/v1/mining_nodes",
 					"protocol": "http",
 					"host": [
 						"111",
@@ -53,7 +53,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://111.44.254.162:41107/api/v1/mining_nodes",
+					"raw": "http://<client ip address>:41107/api/v1/mining_nodes",
 					"protocol": "http",
 					"host": [
 						"111",
