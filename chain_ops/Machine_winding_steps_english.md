@@ -94,8 +94,8 @@ Navigate to: `Developer`--`Transaction`, and select the `bondMachine` method of 
 + Parameter description: (TODO)
   + upload_net: upload bandwidth (take 20M bandwidth as an example, fill in 20).
   + download_net: download bandwidth (take 20M bandwidth as an example, fill in 20).
-  + longitude:Longitude. The east longitude is positive and the west longitude is negative (take the east longitude 131.1548123 as an example, fill in 1311548).
-  + latitude:  Latitude. North latitude is positive and south latitude is negative (take south latitude 121.143253 as an example, fill in -1211432).
+  + longitude:Longitude. The east longitude is positive and the west longitude is negative (take the east longitude 131.1548123 as an example, fill in 1311548,Be careful not to fill in the longitude and latitude upside down).
+  + latitude:  Latitude. North latitude is positive and south latitude is negative (take south latitude 121.143253 as an example, fill in -1211432,Be careful not to fill in the longitude and latitude upside down).
   + Computer room information, you can choose from the following according to the situation: (China Mobile: China Mobile, China Unicom: China Unicom, China Telecom: China Telecom, non-Chinese operators fill in according to their actual names)
   + Mirror information, choose from the following: (ubuntu, ubuntu-proofs)
 
