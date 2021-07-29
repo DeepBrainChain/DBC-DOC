@@ -287,7 +287,8 @@ sudo systemctl status dbc
 
 + http://111.44.254.179:22244/ubuntu-img/ 
 
-+ Alternate site：http://111.44.254.164:22244/ubuntu-img/
++ Alternate site：http://111.44.254.164:22244/ubuntu-img/  
+Download: ubuntu.qcow2 and ubuntu-2004.qcow2 these two mirrors
 
 
 ## Back up the machine id and private key (very important,if this private key is lost, 50% of the pledged coins will be lost, please pay attention to multiple backups)
