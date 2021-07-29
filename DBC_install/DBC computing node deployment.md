@@ -266,7 +266,7 @@ sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
 
->  输入您的钱包地址（如果机器被租用，dbc将直接转入该钱包地址，请确保地址信息正确）
+>  Enter your wallet address (mining rewards will be directly transferred to the wallet address, please make sure the address information is correct)
 >  ![wallet](images/wallet.png)
 
 >The first item in the picture is the machine id and the second item enters your wallet address
@@ -290,9 +290,9 @@ sudo systemctl status dbc
 + Alternate site：http://111.44.254.164:22244/ubuntu-img/
 
 
-## Back up the machine id and private key (very important)
+## Back up the machine id and private key (very important,if this private key is lost, 50% of the pledged coins will be lost, please pay attention to multiple backups)
 
-Back up the contents of the following file: ` /home/dbc/0.3.7.3/dbc_repo/dat/node.dat`, put it in a safe place, and use it later if you reinstall the system or reinstall DBC
+Back up the contents of the following file: ` /home/dbc/0.3.7.3/dbc_repo/dat/node.dat`, put it in a safe place, and use it later If you reinstall the system or reinstall DBC later, you need to use the original id and private key, otherwise the pledged coins will be deducted
 
 
 
