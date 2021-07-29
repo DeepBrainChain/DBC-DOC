@@ -307,11 +307,12 @@ sudo systemctl status dbc
 
 http://111.44.254.179:22244/ubuntu-img/
 备用网站：http://111.44.254.164:22244/ubuntu-img/
+下载：ubuntu.qcow2 和 ubuntu-2004.qcow2 这两个镜像
 
 
 ## 十二、备份机器id以及私钥(非常重要，如果此私钥丢失会损失50%的质押币，请注意多个地方备份)
 
-> 备份如下文件内容：vi  /home/dbc/0.3.7.3/dbc_repo/dat/node.dat，放到安全的位置，后面如果重装系统或者重装DBC需要用到
+> 备份如下文件内容：vi  /home/dbc/0.3.7.3/dbc_repo/dat/node.dat，放到安全的位置，后面如果重装系统或者重装DBC需要用原来的id和私钥，否则质押币会被扣除
 
 
 
