@@ -52,6 +52,20 @@ sudo mount -a
 > 表示可以进行后续操作，如果显示与其不相符，请检查VT-d是否正确开启
 
 ***如果您是20.04系统，操作以下内容即可，无需再去操作其他关于vfio-pci步骤，如果您是ubuntu18.04系统，请按照第四步开始操作***
++ 设置黑名单，使卡不被占用
+```shell
+sudo vim /etc/modprobe.d/blacklist.conf  
+#最后添加内容：
+blacklist snd_hda_intel
+blacklist amd76x_edac
+blacklist vga16fb
+blacklist nouveau
+blacklist rivafb
+blacklist nvidiafb
+blacklist rivatv
+```
++ 设置显卡直通
+
 ```shell
 #查询显卡ID
 lspci -nnv | grep NVIDIA
@@ -287,10 +301,6 @@ sudo wget http://111.44.254.179:22244/install_dbc_ry_machine.sh
 sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
-
->  输入您的资金账户钱包地址（如果机器被租用，该钱包地址涉及dbc质押与收益的流动，请确保地址信息正确）
-> ![wallet](images/wallet.png)
-
 
 
 ## 十、重启DBC程序&服务状态检查
