@@ -5,6 +5,7 @@
 ### 注意：系统采用ubuntu18.04 LTS或者20.04LTS,，并在开始前请卸载掉已经安装的显卡驱动，本操作不可带有显卡驱动
 
 ```shell
+sudo echo "nameserver 8.8.4.4" | sudo tee /etc/resolv.conf > /dev/null
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get  install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf cpu-checker vim -y
@@ -94,8 +95,8 @@ lspci -vv -s <显卡PCI接口> | grep driver
 ```shell
 sudo vim /etc/default/grub
 
-#在GRUB_CMDLINE_LINUX_DEFAULT字段添加 
-intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
+#在GRUB_CMDLINE_LINUX_DEFAULT字段添加 (quiet splash这两项如果有就不需要重复添加）
+quiet splash intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
 #在GRUB_CMDLINE_LINUX字段添加 
 intel_iommu=on iommu=pt rd.driver.pre=vfio-pci
 ```
