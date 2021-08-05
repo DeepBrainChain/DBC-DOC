@@ -118,9 +118,9 @@ sudo update-grub
 
 #重启机器，检查iommu有没有正确启用（也可后续操作完一起重启检查）
 dmesg | grep -i iommu
-
-#显示类似于[ 3.887539] pci 0000:83:00.1: Adding to iommu group 46即表明成功启用
 ```
+***显示类似于[ 3.887539] pci 0000:83:00.1: Adding to iommu group 46即表明成功启用***
+
 
 ## 五、隔离GPU资源
 
