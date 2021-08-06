@@ -90,6 +90,8 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 `控制账户`还需要补充机器信息：
 
+导航到：开发者--交易，如下图选择`onlineProfile`模块的`addMachineInfo`方法。参数填写如下图：
+
 ![image-20210707143303202](bonding_machine.assets/image-20210707143303202.png)
 
 + 参数说明：（TODO）
