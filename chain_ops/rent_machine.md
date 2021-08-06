@@ -14,6 +14,8 @@
   + duration输入需要租用的天数
   + 输入完成后点击提交交易，并在三十分钟内确认机器是否可用。
 ![](bonding_machine.assets/rent_machine.png)
+
+
 + 确认机器可用并租赁
 + 导航到`链状态`----`交易`----`rentMachine`----`confirmRent(machine_id)`
   + 输入机器id并提交交易即可
@@ -28,10 +30,17 @@
   + 下载josn文件：http://111.44.254.179:22244/DBC.postman_collection.json
   + 导入json文件：`fiel`----`import`----`选择json文件导入`
   ![import](bonding_machine.assets/import_file.png)
+  
+  
   + 查看宿主机详细信息：
   ![machine_info](bonding_machine.assets/postman_machine.png)
+  
+  
   + 创建虚拟机：选择创建虚拟机请求模块，`body`处填入：`peer_nodes_list`:机器id；`ssh_port`:定义ssh登录端口；`image_name`：填入ubuntu.qcow2即可，`GPU_count`：根据机器实际GPU数量填入；`CPU_cores`：选择提供给虚拟机的CPU内核数，（本操作属于宿主机CPU直通虚拟机，建议留给宿主机三个及以上保证机器稳定运行，（虚拟机内核数最好为偶数），否则导致整个机器卡死，无法正常使用）；`mem_rate`：填入1.0即可
   ![creat](bonding_machine.assets/creat_vm.png)
+  
+  
 + 创建过程比较慢，大约在五分钟到十五分钟之间，在postman的查看task详细信息查看虚拟机登录信息
 ![task](bonding_machine.assets/see_task.png)
+
 + 其他虚拟机相关操作与上述操作相类似，请结合实际使用。
