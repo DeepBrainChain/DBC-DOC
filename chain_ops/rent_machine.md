@@ -4,6 +4,7 @@
 ### 步骤一
 + 打开浏览器https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finnertest.dbcwallet.io#/extrinsics （打开会提示报错，这个是正常现象，这个时候根据下面步骤来继续操作）
 + 添加类型：`设置`----`开发者`，复制粘贴以下json内容https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.0-fix/dbc_types.json
++ 创建钱包：账户--》添加账户 （助记词一定要保存好，丢失了助记词，账户就无法找回，币就丢失掉了）
 
 ### 步骤二
 1. 租用链上机器 (发邮件申请测试币：feng@deepbrainchain.org,邮件主题：申请测试币，邮件内容：钱包地址)
