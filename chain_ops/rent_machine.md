@@ -6,7 +6,7 @@
 + 添加类型：`设置`----`开发者`，复制粘贴以下json内容https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.0-fix/dbc_types.json
 
 ### 步骤二
-1. 租用链上机器
+1. 租用链上机器 (发邮件申请测试币：feng@deepbrainchain.org,邮件主题：申请测试币，邮件内容：钱包地址)
 + 导航到`链状态`----`交易`----`rentMachine`----`rentMachine(machine_id, duration)`
   + machine_id输入要租用的机器id
   + duration输入需要租用的天数
