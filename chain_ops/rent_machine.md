@@ -40,7 +40,7 @@
   ![creat](bonding_machine.assets/creat_vm.png)
   
   
-+ 创建过程比较慢，大约在五分钟到十五分钟之间，在postman的查看task详细信息查看虚拟机登录信息
++ 创建过程比较慢，大约在五分钟到十五分钟之间，在postman的查看task详细信息查看虚拟机登录信息,创建完成后请及时到链上确认租用（从付款起只有三十分钟）
 ![task](bonding_machine.assets/see_task.png)
 
 + 其他虚拟机相关操作与上述操作相类似，请结合实际使用。
