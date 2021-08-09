@@ -10,7 +10,7 @@
 ### 步骤二
 + 租用链上机器(发邮件申请测试币：feng@deepbrainchain.org,邮件主题：申请测试币，邮件内容：钱包地址)
 + 导航到`开发者`----`交易`----`rentMachine`----`rentMachine(machine_id, duration)`
-  + machine_id输入要租用的机器id
+  + machine_id输入要租用的机器id，输入框里面的0x要先删除掉
   + duration输入需要租用的天数
   + 输入完成后点击提交交易，并在三十分钟内确认机器是否可用。
 ![](bonding_machine.assets/rent_machine.png)
