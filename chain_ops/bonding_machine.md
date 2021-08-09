@@ -5,7 +5,7 @@
 ### 0. 准备工作
 
 + 绑定之前，请确保钱包中有足够的余额。（预计每张卡按 10 万 DBC）。
-+ 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest.dbcwallet.io#/settings/developer` （打开会提示报错，这个是正常现象，这个时候根据下面步骤来继续操作）
++ 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest.dbcwallet.io#/settings/developer`
 
 + 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.0-fix/dbc_types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
 
@@ -18,7 +18,7 @@
 + 说明：
 
   + 为了您的账户资金安全，我们强烈建议使用多签账户作为资金账户，关于多签账户，请转到https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E5%A4%9A%E9%87%8D%E7%AD%BE%E5%90%8D%E8%B4%A6%E6%88%B7.md 了解
-  +  `资金账户` 绑定机器时将从`资金账户`质押DBC，分发奖励时将发放到`资金账户`。
+  +  `资金账户`为机器中内置的，绑定机器时将从`资金账户`质押DBC，分发奖励时将发放到`资金账户`。
   + `控制账户`为管理人员，负责机器上机，维护等操作
   + `资金账户`必须指定一个`控制账户`。
   + `控制账户`要有一些的DBC，链上操作产生的手续费会从`控制账户`扣除。
@@ -53,13 +53,6 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 #### 使用`机器私钥`生成签名数据
 
 使用下面的[脚本](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js)生成签名数据。
-```shell
-#使用方法
-1.在linux服务器安装nodejs 14（版本一定要是14，不然会有其他报错，安装方法请自行百度）
-2.克隆脚本： git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git -b feature/staking_v3.0.0_online_profile
-3.安装：cd DeepBrainChain-MainChain/scripts/test_script && npm install
-4.执行脚本
-```
 
 其中，`--msg` 指定需要签名的消息，消息内容为 `机器ID+资金账户`；`--key` 指定`机器私钥`, **key前面加上0x**；
 
@@ -90,24 +83,17 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 `控制账户`还需要补充机器信息：
 
-导航到：开发者--交易，如下图选择`onlineProfile`模块的`addMachineInfo`方法。参数填写如下图：
+![2021-08-09_11-15](bonding_machine.assets/2021-08-09_11-15-16284796321311.png)
 
-![image-20210707143303202](bonding_machine.assets/image-20210707143303202.png)
-
-+ 参数说明：（TODO）
++ 参数说明：
   + upload_net: 上传带宽（以20M带宽为例，填入20）。
   + download_net: 下载带宽（以20M带宽为例，填入20）。
-  + longitude: 经度。东经为正，西经为负（以东经131.1548123为例，填入1311548，注意经度和纬度不要填反了,误差30公里，此处填错了会被扣质押币）。
-  + latitude:  纬度。北纬为正，南纬为负（以南纬121.143253为例，填入-1211432，注意经度和纬度不要填反了,误差30公里，此处填错了会被扣质押币）。
-  + 机房网络信息，可以根据情况，从以下几种中选择：（中国移动：China Mobile ， 中国联通：China Unicom ， 中国电信： China Telecom ， 海外运营商根据实际名称填写，此处填错了会被扣质押币）
+  + longitude: 经度。~~东经为正，西经为负~~（**以东经131.1548123为例，填入1311548**）。
+  + latitude:  纬度。~~北纬为正，南纬为负~~（**以北纬31.143253为例，填入311432**）。
+  + 机房信息，可以根据情况，从以下几种中选择：（中国移动：China Mobile ， 中国联通：China Unicom ， 中国电信： China Telecom ， 海外运营商根据实际名称填写）
   + 镜像信息，从以下几种中选择：（ubuntu ， ubuntu-proofs）
 
-### 3.查询机器链上状态信息
-+ 导航到`开发者`----`链状态`----`onlineprofile`----`machinesInfo(MachineId): MachineInfo`
-  + 如果想查询单台机器在`MachineId`处填入机器id即可查询对应信息
-  + 如果想查询多台机器信息可以采用上方单台查询方案也可以关闭机器ID后面的***包括选项***，然后点击 + 进行查询，筛查
-
-### 4. 查询与领取奖励
+### 3. 查询与领取奖励
 
 #### 1. 查询奖励
 
@@ -155,12 +141,3 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
  + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`stashMachines`
 + 查看控制账户下上链的机器
  + 导航到`开发者`----`链状态`----`存储`----`onlineProfile`----`controllerMachines`
-
-## 机器下线与重新上线
-+ 机器下线
-  + 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOffline`----`输入机器id`----`提交交易`
-  + 注意，发起者需要是控制账户
-![img](bonding_machine.assets/offline.png)
-+ 机器重新上线
-  + 导航到`开发者`----`交易`----`onlineprofile`----`controllerReportOnline`----`输入机器id`----`提交交易`
-> 机器重新上线时还需重新提交机器信息，请确保经纬度信息正确。

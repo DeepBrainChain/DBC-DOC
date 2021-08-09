@@ -89,9 +89,9 @@ Navigate to: `Developer`--`Transaction`, and select the `bondMachine` method of 
 
 `Control account` also needs to add machine information:
 
-![image-20210707143303202](bonding_machine.assets/image-20210707143303202.png)
+![2021-08-09_11-15](Machine_winding_steps_english.assets/2021-08-09_11-15-16284796475672.png)
 
-+ Parameter description: (TODO)
++ Parameter description: 
   + upload_net: upload bandwidth (take 20M bandwidth as an example, fill in 20).
   + download_net: download bandwidth (take 20M bandwidth as an example, fill in 20).
   + longitude:Longitude. The east longitude is positive and the west longitude is negative (take the east longitude 131.1548123 as an example, fill in 1311548,Be careful not to fill in the longitude and latitude upside down.The error can be within the range of 30 km, and the pledge will be deducted if the content is wrong).
@@ -151,7 +151,7 @@ node tx_by_user.js --port $ws --type-file $tf --rpc-file $rpc --module onlinePro
 + Machine offline
    + Navigate to `Developer`----`Transaction`----`onlineprofile`----`controllerReportOffline`----`Enter machine id`----`Submit transaction`
    + Note that the initiator needs to be a controlling account
-![img](bonding_machine.assets/offline.png)
+   ![img](bonding_machine.assets/offline.png)
 + Modify machine information
   + Navigate to `Developer`----`Transaction`----`onlineprofile`----`addMachineInfo`
 + The machine is back online
