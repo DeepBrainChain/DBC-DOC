@@ -21,11 +21,11 @@
 
 [TODO]()
 
-**说明4：** 本文档仅包含**`自定义RPC的说明`**，如果想查看 **`基于波卡链原生RPC的文档说明`** ，可以参考: https://polkadot.js.org/docs/substrate/rpc/；
+**说明4：** 本文档仅包含 **`自定义RPC的说明`** ，如果想查看 **`基于波卡链原生RPC的文档说明`** ，可以参考: https://polkadot.js.org/docs/substrate/rpc/；
 
 **说明5:**  查看所有RPC的方法：可到dbc网页钱包：https://www.dbcwallet.io/ ，点击左侧切换网络，在自定义终端中，输入websocket接口。然后如下图导航到RPC-calls，查看区块链支持的所有RPC。如图，选择 `rpc`模块的`methods`方法，点击右边的`提交RPC调用`，将列出所有的RPC方法名。
 
-另外，**`自定义的RPC` ** 暂时不支持通过网页调用。
+另外， **`自定义的RPC` ** 暂时不支持通过网页调用。
 
 ![image-20210813113734192](README.assets/image-20210813113734192.png)
 
