@@ -71,7 +71,8 @@ cargo build --release
 
 比如当区块高度为 2880 * 2 + 50，我们可以传的Era值，可以为0，1，分别表示区块链上第一天，第二天发放的奖励。
 
-#### 0. 如何获取当前块高
+
+#### 0. 获取当前块高
 
 + 方法： `chain_getBlock`
 
@@ -93,17 +94,9 @@ cargo build --release
       "jsonrpc": "2.0",
       "result": {
           "block": {
-              "extrinsics": [
-                  "0x280403000b2053fe3e7b01"
-              ],
+  			...
               "header": {
-                  "digest": {
-                      "logs": [
-                          "0x0642414245340200000000c6793c0300000000",
-                          "0x0542414245010150d9eebb19343189ad36c92b7053eac0300e00a8b02feb27d4d78ed2a5dae448b474fd6ef07fe0d134ea12ac0391a32615c0fb9e3b07a2d00659d52eedef788a"
-                      ]
-                  },
-                  "extrinsicsRoot": "0x9ffa11ddae23800899cfba755efa180c5679af43becebe2ecdeac7f2e8651674",
+  				...
                   "number": "0x2d8",
                   "parentHash": "0xc0e1b239fafc0edf3e08a908b5caecb27c2b351ed0daef3fc60c5600b28d6d7d",
                   "stateRoot": "0x55ce4794b2cdd21275656a80febf5133d882d909a2de6d40d7b8887bd65628bc"
@@ -114,10 +107,10 @@ cargo build --release
       "id": 1
   }
   ```
-
+  
   其中，"number": "0x2d8" 即为块高，转为十进制为：728
 
-  
+
 
 #### 1. 查询某个资金账户控制的所有机器
 
