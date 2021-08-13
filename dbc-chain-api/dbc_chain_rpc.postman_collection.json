@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "addaa85d-2401-4875-a228-b32da64c0839",
+		"name": "dbc_chain_rpc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "onlineProfile_getStakerNum",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getStakerNum\",\n      \"params\": []\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getOpInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getOpInfo\",\n      \"params\": []\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getStakerInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getStakerInfo\",\n      \"params\": [\"5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z\"]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getMachineList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getMachineList\",\n      \"params\": []\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getMachineInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getMachineInfo\",\n      \"params\": [\"ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875\"]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getPosGpuInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getPosGpuInfo\",\n      \"params\": []\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getMachineEraReward",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getMachineEraReward\",\n      \"params\": [\"ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875\", 1]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getMachineEraReleasedReward",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getMachineEraReleasedReward\",\n      \"params\": [\"ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875\", 1]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getStashEraReward",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getStashEraReward\",\n      \"params\": [\"5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z\", 1]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getStashEraReleasedReward",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getStashEraReward\",\n      \"params\": [\"5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z\", 1]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getStakerIdentity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getStakerIdentity\",\n      \"params\": [\"5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z\"]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "onlineProfile_getStakerListInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"jsonrpc\":\"2.0\",\n      \"id\":1,\n      \"method\":\"onlineProfile_getStakerListInfo\",\n      \"params\": [0, 50]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9933",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9933"
+				}
+			},
+			"response": []
+		}
+	]
+}
