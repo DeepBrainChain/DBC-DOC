@@ -295,7 +295,7 @@ sudo ./add_dbc_user.sh dbc
 
 ## 九、安装DBC节点程序
 
-> 注意：需要切换到dbc用户安装
+> 注意：需要切换到dbc用户安装 （dbc最新程序在github地址：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/tag/）
 
 ```shell
 su - dbc
