@@ -63,7 +63,13 @@ cargo build --release
 
 ### DBC Custom RPC
 
-关于`块高`，与`Era`的说明。
+#### **关于`块高`，与`Era`的说明**：
+
+1 Era 为2880个区块高度，在DBC区块链上，约是1天。每天发放奖励的时间，为区块链高度的2880的整数倍。
+
+例如，当最新块高为3000时，调用RPC时，Era最多为0 (从0开始)，取的结果表示在区块链上第一天发放的奖励。
+
+比如当区块高度为 2880 * 2 + 50，我们可以传的Era值，可以为0，1，分别表示区块链上第一天，第二天发放的奖励。
 
 
 
@@ -74,6 +80,19 @@ cargo build --release
 #### 2. 查询机器某个Era获得收益
 
 + 方法：`onlineProfile_getMachineEraReward`
+
++ 调用方法：
+
+  ```
+  {
+       "jsonrpc":"2.0",
+        "id":1,
+        "method":"onlineProfile_getMachineEraReward",
+        "params": ["ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875", 1]
+  }
+  ```
+
+  其中，参数分别为`MachineId`， `Era`
 
 + 结果：
 
@@ -87,7 +106,20 @@ cargo build --release
 
 #### 3. 查询机器某个Era解锁收益
 
-+ `onlineProfile_getMachineEraReleasedReward`
++ 方法：`onlineProfile_getMachineEraReleasedReward`
+
++ 调用方法
+
+  ```
+  {
+       "jsonrpc":"2.0",
+        "id":1,
+        "method":"onlineProfile_getMachineEraReleasedReward",
+        "params": ["ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875", 1]
+  }
+  ```
+
+  其中，参数分别为`MachineId`， `Era`
 
 + 结果：
 
@@ -103,6 +135,19 @@ cargo build --release
 
 + `onlineProfile_getStashEraReward`
 
++ 调用方法：
+
+  ```
+  {
+       "jsonrpc":"2.0",
+        "id":1,
+        "method":"onlineProfile_getStashEraReward",
+        "params": ["5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z", 1]
+  }
+  ```
+
+  其中，参数分别为 `资金账户`，`Era`
+
 + 结果：
 
   ```
@@ -116,6 +161,19 @@ cargo build --release
 #### 5. 查询资金账户某个Era解锁奖励
 
 + `onlineProfile_getStashEraReleasedReward`
+
++ 调用方法：
+
+  ```
+  {
+       "jsonrpc":"2.0",
+        "id":1,
+        "method":"onlineProfile_getStashEraReward",
+        "params": ["5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z", 1]
+  }
+  ```
+
+  其中，参数分别为 `资金账户`，`Era`
 
 + 结果：
 
