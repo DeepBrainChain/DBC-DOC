@@ -120,7 +120,7 @@ cargo build --release
 
 + 方法：`onlineProfile_getMachineEraReward`
 
-+ 调用方法：
++ 示例：
 
   ```
   {
@@ -147,7 +147,7 @@ cargo build --release
 
 + 方法：`onlineProfile_getMachineEraReleasedReward`
 
-+ 调用方法
++ 示例：
 
   ```
   {
@@ -174,7 +174,7 @@ cargo build --release
 
 + `onlineProfile_getStashEraReward`
 
-+ 调用方法：
++ 示例：
 
   ```
   {
@@ -201,7 +201,7 @@ cargo build --release
 
 + `onlineProfile_getStashEraReleasedReward`
 
-+ 调用方法：
++ 示例：
 
   ```
   {
