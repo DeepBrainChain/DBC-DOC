@@ -5,6 +5,8 @@
 ### 注意：系统采用ubuntu18.04 LTS或者20.04LTS,，并在开始前请卸载掉已经安装的显卡驱动，本操作不可带有显卡驱动
 
 ```shell
+sudo echo "140.82.114.4 gitub.com"   >> /etc/hosts
+sudo echo "199.232.5.194 github.global.ssl.fastly.net"   >> /etc/hosts
 sudo echo "nameserver 8.8.4.4" | sudo tee /etc/resolv.conf > /dev/null
 sudo apt-get update
 sudo apt-get upgrade -y
@@ -298,7 +300,7 @@ sudo ./add_dbc_user.sh dbc
 ```shell
 su - dbc
 sudo mkdir install && cd install
-sudo wget http://111.44.254.179:22244/install_dbc_ry_machine.sh
+sudo wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/install_dbc_ry_machine.sh
 sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
@@ -311,7 +313,6 @@ sudo systemctl stop dbc
 sudo systemctl start dbc
 sudo systemctl status dbc
 ```
-
 
 
 ## 十一、下载镜像模板（请放置于/data目录下，dbc启动虚拟机会去/data目录搜寻）
