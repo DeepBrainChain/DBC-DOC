@@ -35,7 +35,31 @@
 
 可以自己搭建同步节点，通过自己的节点API获取区块链数据。
 
-方法：TODO
+方法：
+
+```bash
+# 配置环境
+curl https://getsubstrate.io -sSf | bash -s -- --fast
+source ~/.cargo/env
+
+# 编译dbc-chain
+git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git
+cd DeepBrainChain-MainChain && git checkout alpha-v2.1
+cargo build --release
+
+# 运行同步节点：
+./target/release/dbc-chain --base-path ./db_data --chain ./dbcSpecRaw.json --pruning archive -rpc-cors all --bootnodes /ip4/111.44.254.180/tcp/20337/p2p/12D3KooWNtUXjdy8Q9hvdJ35a1jWpPnVBRgpT7nP8LmEgBWGqTpm
+
+
+# 重要参数：
+--rpc-port 9933 #  指定你的节点监听RPC的端口。 9933 是默认值，因此该参数也可忽略
+--ws-port 9945 # 指定你的节点用于监听 WebSocket 的端口。 默认端口为 9944
+--port 30333 # 指定你用于监听 p2p 流量的节点端口。 30333 是默认端口，若无需更改，可以忽略该 flag
+```
+
+如上方法运行了同步节点之后，可以通过 ws://127.0.0.1:9945 调用websocket接口，通过http://127.0.0.1:9933 调用http接口。
+
+如果想远程访问，需要为websocket或http配置域名，以支持 wss 或者 https
 
 ### DBC Custom RPC
 
