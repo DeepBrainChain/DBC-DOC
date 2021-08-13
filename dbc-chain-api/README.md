@@ -14,7 +14,7 @@
   "id": 1,
   "method": method_name,
   "params": [params_1, params_2...]
-}    
+}
 ```
 
 其中，method_name 为RPC方法名，params_1, params_2... 根据需要替换成需要的参数。
@@ -71,23 +71,61 @@ cargo build --release
 
 
 
-
-
 #### 2. 查询机器某个Era获得收益
 
++ 方法：`onlineProfile_getMachineEraReward`
 
++ 结果：
+
+  ```
+  {
+      "jsonrpc": "2.0",
+      "result": "123456",
+      "id": 1
+  }
+  ```
 
 #### 3. 查询机器某个Era解锁收益
 
++ `onlineProfile_getMachineEraReleasedReward`
 
++ 结果：
+
+  ```
+  {
+      "jsonrpc": "2.0",
+      "result": "123456",
+      "id": 1
+  }
+  ```
 
 #### 4. 查询资金账户某个Era获得收益
 
++ `onlineProfile_getStashEraReward`
 
++ 结果：
 
-#### 5. 查询资金账户某个Era获得奖励
+  ```
+  {
+      "jsonrpc": "2.0",
+      "result": "123456",
+      "id": 1
+  }
+  ```
 
+#### 5. 查询资金账户某个Era解锁奖励
 
++ `onlineProfile_getStashEraReleasedReward`
+
++ 结果：
+
+  ```
+  {
+      "jsonrpc": "2.0",
+      "result": "123456",
+      "id": 1
+  }
+  ```
 
 #### 6. 查询机器详细信息
 
