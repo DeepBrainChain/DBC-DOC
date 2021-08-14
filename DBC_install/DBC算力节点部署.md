@@ -300,7 +300,6 @@ sudo ./add_dbc_user.sh dbc
 ```shell
 su - dbc
 sudo mkdir install && cd install
-sudo wget http://116.85.24.172:20444/static/dbc/dbc-linux-mining-0.3.7.3.tar.gz
 sudo wget http://116.85.24.172:20444/static/dbc/install_dbc_ry_machine.sh
 sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
