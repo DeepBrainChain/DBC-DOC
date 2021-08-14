@@ -256,12 +256,13 @@ sudo ./add_dbc_user.sh dbc
 
 ## Install the DBC node program
 
-> Note: need to switch to dbc user installation
+> Note: need to switch to dbc user installation （github：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases）
 
 ```shell
 su - dbc
 sudo mkdir install && cd install
-sudo wget http://111.44.254.179:22244/install_dbc_ry_machine.sh
+sudo wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/dbc-linux-mining-0.3.7.3.tar.gz 
+sudo wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/install_dbc_ry_machine.sh
 sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
