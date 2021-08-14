@@ -260,8 +260,7 @@ sudo ./add_dbc_user.sh dbc
 
 ```shell
 su - dbc
-sudo mkdir install && cd install
-sudo wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/dbc-linux-mining-0.3.7.3.tar.gz 
+sudo mkdir install && cd install 
 sudo wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/install_dbc_ry_machine.sh
 sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
