@@ -266,12 +266,6 @@ sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
 
->  Enter your wallet address (mining rewards will be directly transferred to the wallet address, please make sure the address information is correct)
->  ![wallet](images/wallet.png)
-
->The first item in the picture is the machine id and the second item enters your wallet address
-
-
 
 ## Restart DBC program & service status check
 
@@ -319,6 +313,28 @@ sudo systemctl restart dbc
 >
 > If the GPU part is displayed as N/A, it can be ignored. Other parts show N/A or empty, please correct it manually and restart DBC
 
+## Test to create a virtual machine with graphics card pass-through to check whether the previous configuration is correct
++ Test program download address: wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/check_env  or 
+   wget http://116.85.24.172:20444/static/dbc/check_env
++ Binary file, add execute permission and execute directly: chmod 777 chec_env ; ./check_env
++ If the green check 'vm domain_test successful' appears, it means success. If it does not appear, please check whether the previous configurations are correct.
+
+## Check whether the various hardware parameters of the machine are normal
++ If the previous step is successful, a virtual machine will be successfully created, and log in to the virtual machine through ssh, where: vm_local_ip is the virtual machine's intranet ip address, the user name is dbc, and pwd is the login password
++ ![image](https://user-images.githubusercontent.com/32829693/129731433-3e01b669-f274-419e-9ea0-d7891705a12e.png)
++ Then cd to the test script directory and run:【pytest .】，
+     + cd /test/dbc_gpu_server_test/
+     + sudo -i (Switch to root user)
+     + pytest .
++ A total of 18 tests;
+     + 10 unit tests, testing CPU, memory, hard disk, graphics card, video memory, cuda usability, etc.;
+     + 7 integration tests to test whether the actual usage conditions are normal (such as pytorch calculation, training and inference), and eliminate potential hardware failures;
+     + 1 benchmark speed test, testing the training and inference of dozens of CNN networks, lasting about ten minutes;
+     + If there is no red error, it will pass. If there is a red F/error, the test item corresponding to the error will be displayed, which can be checked according to the information;
+     + The full test process of 4 cards 2080ti is about 10 minutes. If the test time is too long, such as more than half an hour, there may be a problem with the machine, and the test can be aborted in advance.
+     + Short test summary info in the test result: If all are passed, it means the test passed, as long as one item is failed, it means the test failed and the fault needs to be checked;
+     + After the end, the 'result' folder is generated to export the performance report;
++ Back to the host, shut down and delete the tested virtual machine: ./check-env --localip x.x.x.x (x.x.x.x is the internal network ip address of the virtual machine. If you do not operate this step, the dbc program will not be able to start the new virtual machine. Passed on-chain verification)
 
 ## Check whether the machine is correctly added to the computing power network
 + Use the official client node to view
