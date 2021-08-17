@@ -355,7 +355,7 @@ sudo systemctl restart dbc
 + 测试程序下载地址：wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/check_env
 或者 wget http://116.85.24.172:20444/static/dbc/check_env
 + 二进制文件，添加执行权限直接执行即可: chmod 777 chec_env ;  ./check_env
-+ 出现绿色`create vm dbc_check_env_vm_x successful`即为成功，若没有出现，请排查前面各项配置是否正确。
++ 出现绿色`check vm domain_test successful`即为成功，若没有出现，请排查前面各项配置是否正确。
 
 
 ## 十六、检测机器的各种硬件参数指标是否正常
