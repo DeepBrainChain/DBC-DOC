@@ -351,19 +351,33 @@ sudo systemctl restart dbc
 > 如果GPU部分显示为N/A ，可以忽略。其他部分显示N/A或空，请手动改正后重启DBC
 
 
-## 十五、测试创建带有显卡直通的虚拟机
+## 十五、测试创建带有显卡直通的虚拟机,用来检测前面是否正确配置
 + 测试程序下载地址：wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/check_env
 或者 wget http://116.85.24.172:20444/static/dbc/check_env
 + 二进制文件，添加执行权限直接执行即可: chmod 777 chec_env ;  ./check_env
-+ 出现绿色`create vm dbc_check_env_vm_x successful`即为成功，若没有出现，请排查各项配置是否正确。
++ 出现绿色`create vm dbc_check_env_vm_x successful`即为成功，若没有出现，请排查前面各项配置是否正确。
 
 
-## 十六、查看机器是否正确加入到算力网络
+## 十六、检测机器的各种硬件参数指标是否正常
++ 如果第十五步检测成功，会成功创建一个虚拟机，通过ssh登陆进入这个虚拟机内部
++ 然后cd到测试脚本目录，运行: 【pytest .】，
+    +  cd /test/dbc_gpu_server_test/ 
+    +  pytest .
++测试共18项；
+    +10项单元测试，测试CPU，内存，硬盘，显卡，显存，cuda可用性等；
+    +7项集成测试，测试实际各种使用情况是否正常（如pytorch计算 训练 推理）, 排除潜在硬件故障；
+    +1项benchmark速度测试，测试数十种CNN网络的训练和推理，持续约十分钟；
+    +无红色error则通过，有红色F / error会显示报错对应测试项，可根据信息排查; 
+    +4卡2080ti全测试过程约10分钟，若测试时间过长如超过半小时，则机器可能存在问题可以提前中止测试（不中止则需要等测试完成后才会报error）;
+    +测试结果中short test summary info：如果全部是passed，表示测试通过，只要有一项是failed表示测试不通过，需要排查故障；
+    +结束后生成result文件夹导出性能报告;
+
+## 十七、查看机器是否正确加入到算力网络
 + 矿池搭建客户端节点
 + 详细内容请到链接查看：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E6%90%AD%E5%BB%BADBC%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%8A%82%E7%82%B9.md
 + 关于客户端节点：建议每家矿池搭建2个及以上客户端节点，保证在官方提供节点或者其他矿池提供节点掉线情况下依旧可以保证网络正常，如果网络中客户端节点过少或者挂掉过多，会影响机器出租情况。客户端节点搭建可以在其他服务器启动一个容器来部署，并不会占用太多资源。
 + 客户端程序会进行修改，届时可以安装在与算力节点同一个机器。
-## 十七、机器上链
+## 十八、机器上链
 
 https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%BA%BF%E6%AD%A5%E9%AA%A4
 
