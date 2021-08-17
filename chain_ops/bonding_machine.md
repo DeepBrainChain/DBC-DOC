@@ -5,9 +5,9 @@
 ### 0. 准备工作
 
 + 绑定之前，请确保钱包中有足够的余额。（预计每张卡按 10 万 DBC）。
-+ 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest.dbcwallet.io#/settings/developer`
++ 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest2.dbcwallet.io#/settings/developer`
 
-+ 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.0-fix/dbc_types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
++ 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
 
   ![](bonding_machine.assets/火狐截图_2021-06-01T08-25-33.414Z.png)
 
@@ -52,14 +52,20 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 #### 使用`机器私钥`生成签名数据
 
-使用下面的[脚本](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js)生成签名数据。
+使用下面的[脚本 https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/scripts/test_script/gen_signature.js](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/scripts/test_script/gen_signature.js)生成签名数据。
 
 其中，`--msg` 指定需要签名的消息，消息内容为 `机器ID+资金账户`；`--key` 指定`机器私钥`, **key前面加上0x**；
 
 `Signature:`后的数据即为**签名数据**。
 
 ```bash
-❯ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
+# 安装node.js v14
+# Clone 仓库，并下载依赖：
+git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git && cd DeepBrainChain-MainChain && checkout alpha-v2.1
+cd scripts/test_script && npm install
+
+# 生成签名
+node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
 ### Message: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
 ### Signer: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
 ### Signature: 0x5cc8b4c49b244d7c071b124ef68119d7549dd805ea43f69e3c142fd5909f926041a9cad93b16085d72431df2d1164e7911085423bca16625295583686f2fce8c
