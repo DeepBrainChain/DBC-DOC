@@ -362,7 +362,7 @@ sudo systemctl restart dbc
 + 如果第十五步检测成功，会成功创建一个虚拟机，通过ssh登陆进入这个虚拟机内部，其中：vm_local_ip是虚拟机的内网ip地址，用户名是dbc，pwd后面的是登陆密码
 <img width="542" alt="1629202906(1)" src="https://user-images.githubusercontent.com/32829693/129724788-d50728cd-913b-4e91-8d0b-e53a098da091.png">
 
-+ 然后cd到测试脚本目录，运行: 【pytest .】，
++ 然后cd到测试脚本目录，运行: 【sudo pytest .】，
     +  cd /test/dbc_gpu_server_test/ 
     +  sudo pytest .
     
