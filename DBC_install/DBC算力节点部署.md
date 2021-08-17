@@ -363,7 +363,8 @@ sudo systemctl restart dbc
 + 然后cd到测试脚本目录，运行: 【pytest .】，
     +  cd /test/dbc_gpu_server_test/ 
     +  pytest .
-+测试共18项；
+    
++ 测试共18项；
     +10项单元测试，测试CPU，内存，硬盘，显卡，显存，cuda可用性等；
     +7项集成测试，测试实际各种使用情况是否正常（如pytorch计算 训练 推理）, 排除潜在硬件故障；
     +1项benchmark速度测试，测试数十种CNN网络的训练和推理，持续约十分钟；
