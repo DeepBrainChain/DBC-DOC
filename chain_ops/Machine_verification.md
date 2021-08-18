@@ -10,19 +10,23 @@
 
 0. 成为验证委员会成员
 
-   可以通过社区投票参加委员会。（银河竞赛公测阶段，加微信号：DBCService，发送钱包地址和微信名，进行统计）
+    可以通过社区投票参加委员会。（银河竞赛公测阶段，加微信号：DBCService，发送钱包地址和微信名，进行统计）
 
-   验证委员会成员需要提交用于信息加密的公钥，才能正常的派单与抢单。
+    验证委员会成员需要提交用于信息加密的公钥，才能正常的派单与抢单。
 
-   ```bash
-   # 生成公钥，需要利用脚本，指定自己的私钥
-   
-   node gen_boxpubkey.js --key "0x868020ae0687dda7d57565093a69090211449845a7e11453612800b663307246"
-   ```
+    ```bash
+    # 自行安装node.js v14
+    git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git && cd DeepBrainChain-MainChain && git checkout alpha-v2.1
+    cd scripts/test_script/ && npm install
+    
+    
+    # 生成公钥，需要利用脚本，指定自己的私钥
+    node gen_boxpubkey.js --key "0x868020ae0687dda7d57565093a69090211449845a7e11453612800b663307246"
+    ```
 
-   生成了公钥之后，到`committee` -- `committeeSetBoxPubkey` 提交交易进行设定。
+    生成了公钥之后，到`committee` -- `committeeSetBoxPubkey` 提交交易进行设定。
 
-   ![image-20210623145108399](bonding_machine.assets/image-20210623145108399.png)
+    ![image-20210623145108399](bonding_machine.assets/image-20210623145108399.png)
 
 1. 查看系统分配给自己的订单。导航到 `开发者`--`链状态`--`存储`，在其中选择`leaseCommittee`模块的`committeeMachine`存储，点击右侧的`+`号，可以看到委员会的订单情况。如果所示，该委员会有一个系统分配的订单
 
