@@ -335,6 +335,9 @@ sudo systemctl restart dbc
      + Short test summary info in the test result: If all are passed, it means the test passed, as long as one item is failed, it means the test failed and the fault needs to be checked;
      + After the end, the 'result' folder is generated to export the performance report;
 + Back to the host, shut down and delete the tested virtual machine: ./check-env --localip x.x.x.x (x.x.x.x is the internal network ip address of the virtual machine. If you do not operate this step, the dbc program will not be able to start the new virtual machine. Passed on-chain verification)
++ Run the iptable command to grant the network access permission to the vm. (If you do not perform this step, external users cannot access the VM.)
+     + iptables -D LIBVIRT_FWI 2 -t filter
+     + iptables -D LIBVIRT_FWO 2 -t filter
 
 ## Check whether the machine is correctly added to the computing power network
 + Use the official client node to view
