@@ -1,7 +1,9 @@
 # 委员会如何验证机器
 
 打开网页钱包的设置页面：https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest2.dbcwallet.io#/settings/developer （打开会报错，这个是正常现象，把下面的types.json填入到设置-》开发者页面中就正常了）
-https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.assets/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2021-06-01T08-25-33.414Z.png
+![image](https://user-images.githubusercontent.com/32829693/129827244-c8e1e2af-1132-43c7-a71e-87907e00c35e.png)
+
+
 打开https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json ，复制 types.json的内容，并粘贴到网页钱包的设置-》开发者页面中，点击保存。
 
 刷新网页，等待一会。
