@@ -6,7 +6,7 @@
 
 打开https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json ，复制 types.json的内容，并粘贴到网页钱包的设置-》开发者页面中，点击保存。
 
-刷新网页，等待一会。
+刷新网页，等待一会。页面打开后 点击账户-》添加账户就可以创建钱包 （助记词务必要保存好，建议在多个地方备份，这个丢失了里面的dbc代币将无法找回，永久丢失）
 
 0. 成为验证委员会成员
 
