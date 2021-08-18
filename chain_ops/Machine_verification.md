@@ -1,10 +1,16 @@
 # 委员会如何验证机器
 
-0. 成为委员会
+打开网页钱包的设置页面：https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest2.dbcwallet.io#/settings/developer （打开会报错，这个是正常现象，把下面的types.json填入到设置-》开发者页面中就正常了）
+https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.assets/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2021-06-01T08-25-33.414Z.png
+打开https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json ，复制 types.json的内容，并粘贴到网页钱包的设置-》开发者页面中，点击保存。
 
-   可以通过社区投票参加委员会。
+刷新网页，等待一会。
 
-   委员会需要提交用于信息加密的公钥，才能正常的派单与抢单。
+0. 成为验证委员会成员
+
+   可以通过社区投票参加委员会。（银河竞赛公测阶段，加微信号：DBCService，发送钱包地址和微信名，进行统计）
+
+   验证委员会成员需要提交用于信息加密的公钥，才能正常的派单与抢单。
 
    ```bash
    # 生成公钥，需要利用脚本，指定自己的私钥
