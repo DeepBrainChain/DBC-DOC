@@ -376,6 +376,9 @@ sudo systemctl restart dbc
     + 测试结果中short test summary info：如果全部是passed，表示测试通过，只要有一项是failed表示测试不通过，需要排查故障；
     + 结束后生成result文件夹导出性能报告;
 + 回到宿主机关闭并删除测试的虚拟机：./check-env  --localip  x.x.x.x  （x.x.x.x 为虚拟机的内网ip地址，这一步不操作，会导致dbc程序无法启动新的虚拟机，从而无法上链验证通过）
++ 执行iptable命令，开放机器网络访问权限：（这一步不操作，会导致外部无法访问虚拟机）
+        iptables -D LIBVIRT_FWI 2 -t filter
+        iptables -D LIBVIRT_FWO 2 -t filter 
 
 ## 十七、查看机器是否正确加入到算力网络
 + 矿池搭建客户端节点
