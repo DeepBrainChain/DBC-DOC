@@ -87,7 +87,7 @@ Navigate to: `Developer`--`Transaction`, and select the `bondMachine` method of 
 
 #### `Control account` add machine information
 
-`Control account` also needs to add machine information:
+`Control account` also needs to add machine information:Navigate to `Developer` -- `Transaction`--`onlineProfile`--`addMachineInfo`
 
 ![2021-08-09_11-15](Machine_winding_steps_english.assets/2021-08-09_11-15-16284796475672.png)
 
