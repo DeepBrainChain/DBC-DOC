@@ -61,7 +61,7 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 ```bash
 # 安装node.js v14
 # Clone 仓库，并下载依赖：
-git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git && cd DeepBrainChain-MainChain && checkout alpha-v2.1
+git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git && cd DeepBrainChain-MainChain && git checkout alpha-v2.1
 cd scripts/test_script && npm install
 
 # 生成签名
