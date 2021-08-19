@@ -49,7 +49,7 @@
    当获取到要求的信息后，修改该脚本，并执行，得到 hash 值。**请保存好所填写的信息，直到该机器上线成功，或者上线失败**
 
    ```bash
-   python3 hash_str.py
+   python3 hash_machine_info.py
    ```
 
 4. 委员会提交机器信息的 Hash。如图，在 36 小时之前提交机器信息的 Hash
