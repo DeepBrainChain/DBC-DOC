@@ -103,7 +103,7 @@ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f
 
 #### `控制账户`添加机器信息
 
-`控制账户`还需要补充机器信息：
+`控制账户`还需要补充机器信息：导航到`开发者`--`交易`--`onlineProfile`--`addMachineInfo`
 
 ![image-20210817115411030](bonding_machine.assets/image-20210817115411030.png)
 
