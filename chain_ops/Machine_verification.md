@@ -52,7 +52,7 @@
    python3 hash_machine_info.py
    ```
 
-4. 委员会提交机器信息的 Hash。如图，在 36 小时之前提交机器信息的 Hash
+4. 委员会提交机器信息的 Hash。如图，在 36 小时之前提交机器信息的 Hash(提交的时候要注意 0x一定不能去掉，hash值填在0x之后)
 
    ![image-20210601165736511](bonding_machine.assets/image-20210601165736511.png)
    
