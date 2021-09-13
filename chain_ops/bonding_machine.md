@@ -4,7 +4,10 @@
 
 ### 0. 准备工作
 
+#### 导入自定义类型
+
 + 绑定之前，请确保钱包中有足够的余额。（预计每张卡按 10 万 DBC）。
+
 + 打开网页钱包的设置页面：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest2.dbcwallet.io#/settings/developer`
 
 + 打开`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json` ，复制 `types.json`的内容，并粘贴到网页钱包的设置页面，点击保存。
@@ -12,6 +15,38 @@
   ![](bonding_machine.assets/火狐截图_2021-06-01T08-25-33.414Z.png)
 
 + 刷新网页，等待一会。
+
+#### 生成账户：保存钱包私钥，用于后续操作
+
+方式1: 通过命令行方式：`subkey generate --scheme sr25519`，生成内容如下：
+
+```
+Secret phrase `final huge obscure action vacuum public banner autumn remove close exotic rotate` is account:
+  Secret seed:       0x4b6490134a277f9d4ba36a5671eefa122159dbdecb1fb5f4e937bb8c3f0d2474
+  Public key (hex):  0xbae85335116a2f65417d26226ac7d3de188c5160915378ceb4dd7e59a1f0c873
+  Public key (SS58): 5GHmn7gTjf7JsXCdieFj7Ypu8gibCXdroU2jG182H2e3zMkf
+  Account ID:        0xbae85335116a2f65417d26226ac7d3de188c5160915378ceb4dd7e59a1f0c873
+  SS58 Address:      5GHmn7gTjf7JsXCdieFj7Ypu8gibCXdroU2jG182H2e3zMkf
+```
+
++ 其中，***Secret seed，即是私钥种子。***
++ `subkey`的更多用法，请参考：https://substrate.dev/docs/en/knowledgebase/integrate/subkey
+
+方式2: 通过网页生成
+
+到网页钱包，点击`添加账户`，在弹出框中会提示`助记词`，点击右侧`助记词`，可以***切换到`原始种子`，妥善保存！***
+
+![2021-09-13_09-58](bonding_machine.assets/2021-09-13_09-58.png)
+
+![2021-09-13_09-59](bonding_machine.assets/2021-09-13_09-59.png)
+
+#### 助记词转私钥种子：
+
+subkey inspect + 助记词，例如：
+
+```
+subkey inspect "grief cabin hint replace chalk recall alpha crunch vacant range success rent"
+```
 
 ### 1. 资金账户绑定控制账户
 
