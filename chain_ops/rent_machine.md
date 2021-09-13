@@ -19,10 +19,10 @@
 
 ### 步骤三：创建虚拟机
 + 生成签名信息
- + 在linux服务器下载签名工具http://111.44.254.179:22244/sign_tool
- + 执行chmod +x sign_tool添加可执行权限
- + 生成签名信息`./sign_tool 钱包地址 钱包私钥`
- + 将生成的签名信息对应填入`sign`,`nonce`,`wallet`即可
+  + 在linux服务器下载签名工具http://111.44.254.179:22244/sign_tool
+  + 执行chmod +x sign_tool添加可执行权限
+  + 生成签名信息`./sign_tool 钱包地址 钱包私钥`
+  + 将生成的签名信息对应填入`sign`,`nonce`,`wallet`即可
 
 + post发送请求创建虚拟机
   + 下载安装postman，具体下载请去官网根据操作系统安装
