@@ -18,9 +18,15 @@
 
 
 ### 步骤三：创建虚拟机
++ 生成签名信息
+ + 在linux服务器下载签名工具http://111.44.254.179:22244/sign_tool
+ + 执行chmod +x sign_tool添加可执行权限
+ + 生成签名信息`./sign_tool 钱包地址 钱包私钥`
+ + 将生成的签名信息对应填入`sign`,`nonce`,`wallet`即可
+
 + post发送请求创建虚拟机
   + 下载安装postman，具体下载请去官网根据操作系统安装
-  + 下载josn文件：http://111.44.254.179:22244/DBC.postman_collection.json
+  + 下载josn文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
   + 导入json文件：`fiel`----`import`----`选择json文件导入`
   ![import](bonding_machine.assets/import_file.png)
   
@@ -29,7 +35,7 @@
   ![machine_info](bonding_machine.assets/postman_machine.png)
   
   
-  + 创建虚拟机：选择创建虚拟机请求模块，`body`处填入：`peer_nodes_list`:机器id；`ssh_port`:定义ssh登录端口；`image_name`：填入ubuntu.qcow2即可，`GPU_count`：根据机器实际GPU数量填入；`CPU_cores`：选择提供给虚拟机的CPU内核数，（本操作属于宿主机CPU直通虚拟机，建议留给宿主机三个及以上保证机器稳定运行，（虚拟机内核数最好为偶数），否则导致整个机器卡死，无法正常使用）；`mem_rate`：填入1.0即可
+  + 创建虚拟机：选择创建虚拟机请求模块，`body`处填入：`peer_nodes_list`:机器id；`ssh_port`:定义ssh登录端口；`image_name`：填入ubuntu.qcow2即可，`GPU_count`：根据机器实际GPU数量填入；`CPU_cores`：选择提供给虚拟机的CPU内核数，（本操作属于宿主机CPU直通虚拟机，建议留给宿主机三个及以上保证机器稳定运行，（虚拟机内核数最好为偶数），否则导致整个机器卡死，无法正常使用）；`mem_rate`：填入1.0即可。
   ![creat](bonding_machine.assets/creat_vm.png)
   
   
