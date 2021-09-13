@@ -16,9 +16,9 @@
 
 + 刷新网页，等待一会。
 
-#### 生成账户：保存钱包私钥，用于后续操作
+#### 账户私钥：后续步骤需要用到账户私钥，根据生成账户方式的不同，私钥位置如下：
 
-方式1: 通过命令行方式：`subkey generate --scheme sr25519`，生成内容如下：
+方式1: **通过命令行账户**：`subkey generate --scheme sr25519`，生成账户，输出内容如下：
 
 ```
 Secret phrase `final huge obscure action vacuum public banner autumn remove close exotic rotate` is account:
@@ -32,21 +32,36 @@ Secret phrase `final huge obscure action vacuum public banner autumn remove clos
 + 其中，***Secret seed，即是私钥种子。***
 + `subkey`的更多用法，请参考：https://substrate.dev/docs/en/knowledgebase/integrate/subkey
 
-方式2: 通过网页生成
+方式2: **通过网页生成账户**时的私钥位置：
 
-到网页钱包，点击`添加账户`，在弹出框中会提示`助记词`，点击右侧`助记词`，可以***切换到`原始种子`，妥善保存！***
+到网页钱包，点击`添加账户`，在弹出框中会提示`助记词`，**点击右侧`助记词`**，可以***切换到`原始种子`，即为需要保存的私钥，妥善保存！***
 
 ![2021-09-13_09-58](bonding_machine.assets/2021-09-13_09-58.png)
 
 ![2021-09-13_09-59](bonding_machine.assets/2021-09-13_09-59.png)
 
-#### 助记词转私钥种子：
+#### 方式3，如果只有助记词，需要将助记词转私钥种子，使用命令行工具 subkey,
 
-subkey inspect + 助记词，例如：
+`subkey inspect + 助记词`，例如：
 
 ```
 subkey inspect "grief cabin hint replace chalk recall alpha crunch vacant range success rent"
 ```
+
+生成内容如下：
+
+```
+Secret phrase `grief cabin hint replace chalk recall alpha crunch vacant range success rent` is account:
+  Secret seed:       0xb4789ce6da4c3eece566ae7848f91822079d7e9b07e4cb77f00beafcb28fb611
+  Public key (hex):  0xfabef9d9550ecc3247035be7091ea7d8b384cfdeb1dfae3ff80ba9515cca2570
+  Public key (SS58): 5HjUZSGCZgBN86syLVRrW1mAHE6nFZcxK5AFephzoj5xc1FN
+  Account ID:        0xfabef9d9550ecc3247035be7091ea7d8b384cfdeb1dfae3ff80ba9515cca2570
+  SS58 Address:      5HjUZSGCZgBN86syLVRrW1mAHE6nFZcxK5AFephzoj5xc1FN
+```
+
+其中，`Secret seed`即为私钥种子
+
+#### 方式4，如果只有加密的json种子，目前没有可用的工具直接转为私钥，可按上述步骤，重新生成新账户
 
 ### 1. 资金账户绑定控制账户
 
