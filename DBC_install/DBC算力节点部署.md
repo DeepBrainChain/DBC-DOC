@@ -92,7 +92,8 @@ lspci -vv -s <显卡PCI接口> | grep driver
 
 ## 四、启用系统分组
 
-### 1、配置iommu分组（以下内容中请根据服务器平台进行iommu替换，intel使用intel_iommu,AMD使用
+### 1、配置iommu分组
+#### （以下内容中请根据服务器平台进行iommu替换，intel使用intel_iommu,AMD使用amd_iommu）
 
 ```shell
 sudo vim /etc/default/grub
