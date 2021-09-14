@@ -35,8 +35,8 @@ sudo mount -a
 
 ### 1、开启硬件支持
 
-> BIOS开启VT-d（根据主板类型浏览器搜索即可）
-> VT（VT-x）及VT-d支持，需要将相关支持设置为enable，默认开启
+> BIOS开启VT-d（如果是AMD平台，需要开启AMD-Vi     具体操作根据主板类型浏览器搜索即可）
+> VT（VT-x）及VT-d支持，AMD叫AMD-Vi。需要将相关支持设置为enable，默认开启
 >
 > 一般情况下路径：Processor—IIO Configuration—Intel@ VT for Directed I/O(VT-d)
 
@@ -76,7 +76,7 @@ lspci -nnv | grep NVIDIA
 
 #修改内核文件
 sudo vim /etc/default/grub
-#在GRUB_CMDLINE_LINUX_DEFAULT字段添加 
+#在GRUB_CMDLINE_LINUX_DEFAULT字段添加（如果是AMD平台，intel_iommu=on改为amd_iommu=on) 
 quiet splash intel_iommu=on kvm.ignore_msrs=1 vfio-pci.ids=<显卡id，中间以逗号隔开>
 
 #更新内核
@@ -92,7 +92,7 @@ lspci -vv -s <显卡PCI接口> | grep driver
 
 ## 四、启用系统分组
 
-### 1、配置intel_iommu
+### 1、配置iommu分组（以下内容中请根据服务器平台进行iommu替换，intel使用intel_iommu,AMD使用
 
 ```shell
 sudo vim /etc/default/grub
