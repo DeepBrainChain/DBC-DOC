@@ -1,6 +1,6 @@
 # 委员会如何验证机器
 
-打开网页钱包的设置页面：https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest2.dbcwallet.io#/settings/developer （打开会报错，这个是正常现象，把下面的types.json填入到设置-》开发者页面中就正常了）
+打开网页钱包的设置页面：https://www.dbcwallet.io/?rpc=wss%3A%2F%2Fpreinfo.dbcwallet.io#/settings/developer （初次打开会提示类型报错，这个是正常现象，把下面的types.json填入到设置-》开发者页面中就正常了）
 ![image](https://user-images.githubusercontent.com/32829693/129827244-c8e1e2af-1132-43c7-a71e-87907e00c35e.png)
 
 
@@ -54,6 +54,8 @@
 
 4. 委员会提交机器信息的 Hash。如图，在 36 小时之前提交机器信息的 Hash(提交的时候要注意 0x一定不能去掉)
 
+   注意：图片中，**leaseCommittee替换成onlineCommittee!!!** 其他不变。
+   
    ![image-20210601165736511](bonding_machine.assets/image-20210601165736511.png)
    
 5. 委员会提交机器的原始信息。**请确保提交机器原始信息时，在派单之后的 36~48 小时之间！**

@@ -5,9 +5,9 @@
 ### 0. Ready to work
 
 + Before binding, please make sure you have enough balance in your wallet. (Each card is estimated to be 100,000 DBC).
-+ Open the settings page of the web wallet：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfotest.dbcwallet.io#/settings/developer`
++ Open the settings page of the web wallet：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Fpreinfo.dbcwallet.io#/settings/developer`
 
-+ Open`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/types.json` ，Copy the content of `types.json`, paste it into the web wallet settings page, and click Save.
++ Open`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json` ，Copy the content of `types.json`, paste it into the web wallet settings page, and click Save.
 
   ![](bonding_machine.assets/火狐截图_2021-06-01T08-25-33.414Z.png)
 
