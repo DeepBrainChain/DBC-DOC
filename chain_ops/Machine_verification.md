@@ -40,7 +40,18 @@
 
    `verify_time` 表示系统分派的，委员会验证机器信息的开始时间。如图，该委员会被分派了 9 次机会来验证机器，每次持续时间为 4 个小时，也就是 480 个块高。此时，委员会可以挑选自己方便的时间，通过前端查询该机器的登录信息，登录到系统中验证机器。
 
-3. 委员会计算获得机器信息的 hash
+3. 查询机器信息
+   下载安装postman，具体下载请去官网根据操作系统安装
+
+   下载josn文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
+   
+   导入json文件：fiel----import----选择json文件导入 import
+    ![image](https://user-images.githubusercontent.com/32829693/133870420-b790637c-cab6-44f9-ba00-493eadc951cd.png)
+
+   查看宿主机详细信息： machine_info
+    ![image](https://user-images.githubusercontent.com/32829693/133870422-fa4a60e8-2b9f-47e8-957d-36224961ebc1.png)
+
+5. 委员会计算获得机器信息的 hash
 
    我们已经提供了脚本来计算需要填写的信息的 Hash：
 
