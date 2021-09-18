@@ -9,8 +9,7 @@
 ## 2.安装客户端节点
 
 ```shell
-sudo wget http://111.44.254.179:22244/dbc-linux-client-0.3.7.3.tar.gz
-或者： sudo wget http://111.44.254.164:22244/dbc-linux-client-0.3.7.3.tar.gz
+sudo wget http://116.85.24.172:20444/static/dbc/dbc-linux-client-0.3.7.3.tar.gz
 sudo tar -zxvf dbc-linux-client-0.3.7.3.tar.gz
 cd 0.3.7.3/dbc_repo/
 
