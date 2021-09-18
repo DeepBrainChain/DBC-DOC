@@ -41,15 +41,24 @@
    `verify_time` 表示系统分派的，委员会验证机器信息的开始时间。如图，该委员会被分派了 9 次机会来验证机器，每次持续时间为 4 个小时，也就是 480 个块高。此时，委员会可以挑选自己方便的时间，通过前端查询该机器的登录信息，登录到系统中验证机器。
 
 3. 查询机器信息
+   
    下载安装postman，具体下载请去官网根据操作系统安装
 
    下载josn文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
    
    导入json文件：fiel----import----选择json文件导入 import
     ![image](https://user-images.githubusercontent.com/32829693/133870420-b790637c-cab6-44f9-ba00-493eadc951cd.png)
+    
+   查看宿主机详细信息：
+   
+   签名工具下载地址：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/sign_tool
+   
+   签名执行：./sign_tool 钱包地址 钱包私钥
+   ![image](https://user-images.githubusercontent.com/32829693/133870889-61976abb-ae6b-4cd6-97e3-9e9205745346.png)
 
-   查看宿主机详细信息： machine_info
-    ![image](https://user-images.githubusercontent.com/32829693/133870422-fa4a60e8-2b9f-47e8-957d-36224961ebc1.png)
+   在下图中填入：sign、nonce、wallet，可以查询到机器信息
+   <img width="751" alt="1631934612(1)" src="https://user-images.githubusercontent.com/32829693/133870573-04dbcb84-9112-4837-b8e4-20db8538c079.png">
+
 
 5. 委员会计算获得机器信息的 hash
 
