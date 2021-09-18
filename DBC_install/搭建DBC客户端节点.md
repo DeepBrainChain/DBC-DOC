@@ -42,7 +42,9 @@ rest_ip 改为0.0.0.0
    安装包：sudo apt-get install libvirt
    
    添加执行权限：chmod 777 sign_tool ,  然后签名执行：./sign_tool   钱包地址   钱包私钥种子
+   
    怎么获得钱包私钥种子？https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E8%B4%A6%E6%88%B7%E7%A7%81%E9%92%A5%E5%90%8E%E7%BB%AD%E6%AD%A5%E9%AA%A4%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%E8%B4%A6%E6%88%B7%E7%A7%81%E9%92%A5%E6%A0%B9%E6%8D%AE%E7%94%9F%E6%88%90%E8%B4%A6%E6%88%B7%E6%96%B9%E5%BC%8F%E7%9A%84%E4%B8%8D%E5%90%8C%E7%A7%81%E9%92%A5%E4%BD%8D%E7%BD%AE%E5%A6%82%E4%B8%8B
+   
    ![image](https://user-images.githubusercontent.com/32829693/133870889-61976abb-ae6b-4cd6-97e3-9e9205745346.png)
 
    在下图中填入：sign、nonce、wallet （注意：同一个机器sign、nonce只能使用一次），可以查询到机器信息
