@@ -28,9 +28,21 @@ rest_ip 改为0.0.0.0
 
 ## 4.通过HTTP请求查看功能节点是否正确加入到网络（通过浏览器访问）
 
-+ 安装postman客户端
-+ 导入以下地址json查询
-+ http://111.44.254.179:22244/tmp_api.postman_collection.json
-+ 操作方法：将以上json内容或文件保存下来，然后打开postman选择file-----import导入，然后添加搭建的客户端ip地址即可
-+ 查询所有机器不需要加任何参数即可使用，查机器id详细信息选择post请求链接下方的***body***，peer_nodes_list下输入机器id发送即可查询
-![img](images/postman.png)
++ 下载安装postman，具体下载请去官网根据操作系统安装
+
++ 下载josn文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
+   
++ 导入json文件：fiel----import----选择json文件导入 import
+    ![image](https://user-images.githubusercontent.com/32829693/133870420-b790637c-cab6-44f9-ba00-493eadc951cd.png)
+    
++ 查看宿主机详细信息：
+   
+   签名工具下载地址：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/sign_tool
+   
+   添加执行权限：chmod 777 sign_tool,然后签名执行：./sign_tool 钱包地址 钱包私钥
+   ![image](https://user-images.githubusercontent.com/32829693/133870889-61976abb-ae6b-4cd6-97e3-9e9205745346.png)
+
+   在下图中填入：sign、nonce、wallet （注意：sign、nonce只能使用一次），可以查询到机器信息
+   <img width="751" alt="1631934612(1)" src="https://user-images.githubusercontent.com/32829693/133870573-04dbcb84-9112-4837-b8e4-20db8538c079.png">
+
+   <img width="584" alt="46ee522c8a34cfe14979db0e7b91ca6" src="https://user-images.githubusercontent.com/32829693/133871452-06dde25a-9691-44dc-b35b-124dbece44fd.png">
