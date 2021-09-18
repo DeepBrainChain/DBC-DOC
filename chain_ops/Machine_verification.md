@@ -53,7 +53,9 @@
    
    签名工具下载地址：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/sign_tool
    
-   添加执行权限：chmod 777 sign_tool,然后签名执行：./sign_tool 钱包地址 钱包私钥
+   安装包：sudo apt-get install libvirt
+   
+   添加执行权限：chmod 777 sign_tool ,  然后签名执行：./sign_tool 钱包地址 钱包私钥
    ![image](https://user-images.githubusercontent.com/32829693/133870889-61976abb-ae6b-4cd6-97e3-9e9205745346.png)
 
    在下图中填入：sign、nonce、wallet （注意：同一个机器sign、nonce只能使用一次），可以查询到机器信息
