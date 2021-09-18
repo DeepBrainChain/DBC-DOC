@@ -30,7 +30,7 @@ rest_ip 改为0.0.0.0
 
 + 下载安装postman，具体下载请去官网根据操作系统安装
 
-+ 下载josn文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
++ 下载json文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
    
 + 导入json文件：fiel----import----选择json文件导入 import
     ![image](https://user-images.githubusercontent.com/32829693/133870420-b790637c-cab6-44f9-ba00-493eadc951cd.png)
