@@ -45,4 +45,3 @@ rest_ip 改为0.0.0.0
    在下图中填入：sign、nonce、wallet （注意：sign、nonce只能使用一次），可以查询到机器信息
    <img width="751" alt="1631934612(1)" src="https://user-images.githubusercontent.com/32829693/133870573-04dbcb84-9112-4837-b8e4-20db8538c079.png">
 
-   <img width="584" alt="46ee522c8a34cfe14979db0e7b91ca6" src="https://user-images.githubusercontent.com/32829693/133871452-06dde25a-9691-44dc-b35b-124dbece44fd.png">
