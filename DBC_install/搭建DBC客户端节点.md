@@ -16,7 +16,7 @@ cd 0.3.7.3/dbc_repo/
 
 #修改conf目录下的core.conf配置文件：
 rest_ip 改为0.0.0.0
-
+rest_port=4545     #此处建议使用5000以下端口
 #启动dbc：
 ./dbc -d
 ```
