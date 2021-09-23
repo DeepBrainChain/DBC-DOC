@@ -9,16 +9,15 @@
 ## 2.Install the client node
 
 ```shell
-sudo wget http://111.44.254.179:22244/dbc-linux-client-0.3.7.3.tar.gz
-Or： sudo wget http://111.44.254.164:22244/dbc-linux-client-0.3.7.3.tar.gz
+sudo wget http://116.85.24.172:20444/static/dbc/dbc-linux-client-0.3.7.3.tar.gz
 sudo tar -zxvf dbc-linux-client-0.3.7.3.tar.gz
 cd 0.3.7.3/dbc_repo/
 
 
-#Modify the core.conf configuration file in the conf directory:
-rest_ip 改为0.0.0.0
-
-#Start dbc:
+#Modify the core.conf configuration file in the conf directory：
+rest_ip=0.0.0.0
+rest_port=4545     #It is recommended to use ports below 5000
+#start dbc：
 ./dbc -d
 ```
 
