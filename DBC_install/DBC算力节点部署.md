@@ -301,7 +301,7 @@ sudo ./add_dbc_user.sh dbc
 ```shell
 su - dbc
 sudo mkdir install && cd install
-sudo wget http://116.85.24.172:20444/static/dbc/install_dbc_ry_machine.sh
+sudo wget http://111.44.254.179:22244/dbc/install_dbc_ry_machine.sh
 sudo bash ./install_dbc_ry_machine.sh -d
 sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
 ```
@@ -353,7 +353,7 @@ sudo systemctl restart dbc
 
 ## 十五、测试创建带有显卡直通的虚拟机,用来检测前面是否正确配置
 + 测试程序下载地址：wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/check_env
-或者 wget http://116.85.24.172:20444/static/dbc/check_env
+或者 wget http://111.44.254.179:22244/dbc/check_env
 + 二进制文件，添加执行权限直接执行即可: chmod 777 chec_env ;  ./check_env
 + 出现绿色`check vm domain_test successful`即为成功，若没有出现，请排查前面各项配置是否正确。
 
