@@ -48,7 +48,7 @@
    
    导入json文件：fiel----import----选择json文件导入 import
     ![image](https://user-images.githubusercontent.com/32829693/133870420-b790637c-cab6-44f9-ba00-493eadc951cd.png)
-    
+   
    查看宿主机详细信息：
    
    签名工具下载地址：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/sign_tool
@@ -84,3 +84,13 @@
 5. 委员会提交机器的原始信息。**请确保提交机器原始信息时，在派单之后的 36~48 小时之间！**
 
    ![image-20210601165851303](bonding_machine.assets/image-20210601165851303.png)
+
+7. 委员会奖励的查询与领取
+
+   + 查询奖励：导航到 开发者--链状态--存储，查询委员会帐号对应的奖励（committee模块的committeeStake方法）。如图，其中`can_claim_reward`为可领取的奖励；`claimed_reward`为已经领取的奖励。
+
+     ![image-20211020112744070](Machine_verification.assets/image-20211020112744070.png)
+
+   + 领取奖励：导航到 开发者--交易，选择委员会帐号，选择committee模块的claimReward方法，提交交易即可。
+
+     ![image-20211020112948942](Machine_verification.assets/image-20211020112948942.png)
