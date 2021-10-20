@@ -21,7 +21,7 @@ cd DeepBrainChain-MainChain && git checkout alpha-v2.1
 cargo build --release
 
 # 运行同步节点：
-./target/release/dbc-chain --base-path ./db_data --chain ./dbcSpecRaw.json --pruning archive -rpc-cors all --bootnodes /ip4/111.44.254.180/tcp/20337/p2p/12D3KooWNtUXjdy8Q9hvdJ35a1jWpPnVBRgpT7nP8LmEgBWGqTpm
+./target/release/dbc-chain --base-path ./db_data --chain ./dbcSpecRaw.json --pruning archive -rpc-cors all --bootnodes /ip4/111.44.254.180/tcp/30151/p2p/12D3KooWPyJ1s1k3BgBNh9kfxUp9ge27q5FPPVk8UrwDkK153yBq
 
 
 # 重要参数：
