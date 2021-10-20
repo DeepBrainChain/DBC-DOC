@@ -17,11 +17,11 @@ source ~/.cargo/env
 
 # 编译dbc-chain
 git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git
-cd DeepBrainChain-MainChain && git checkout alpha-v2.1
+cd DeepBrainChain-MainChain && git checkout d391d0e
 cargo build --release
 
 # 运行同步节点：
-./target/release/dbc-chain --base-path ./db_data --chain ./dbcSpecRaw.json --pruning archive -rpc-cors all --bootnodes /ip4/111.44.254.180/tcp/30151/p2p/12D3KooWPyJ1s1k3BgBNh9kfxUp9ge27q5FPPVk8UrwDkK153yBq
+./target/release/dbc-chain --base-path ./db_data --chain ./dbcSpecRaw.json --pruning archive --rpc-cors all --bootnodes /ip4/111.44.254.180/tcp/30151/p2p/12D3KooWPyJ1s1k3BgBNh9kfxUp9ge27q5FPPVk8UrwDkK153yBq
 
 
 # 重要参数：
