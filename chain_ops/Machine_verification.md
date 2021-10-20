@@ -103,4 +103,4 @@
 
    ![image-20211020113330231](Machine_verification.assets/image-20211020113330231.png)
 
-   注意，如果查看到为乱码，需要更新类型，最新的类型：https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json
+   注意，如果查看到为乱码，需要更新类型，类型文件：https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/d391d0e687e27cf8003c6b549e56aacc39dce3fb/dbc_types.json
