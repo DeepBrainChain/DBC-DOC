@@ -94,3 +94,13 @@
    + 领取奖励：导航到 开发者--交易，选择委员会帐号，选择committee模块的claimReward方法，提交交易即可。
 
      ![image-20211020112948942](Machine_verification.assets/image-20211020112948942.png)
+
+8. 查询惩罚(下个版本改变)
+
+   委员会可以通过 开发者--链状态--选择committee模块的pendingSlash方法来查询奖励。其中，SlashId为自增的，可以不包含该值，查询所有还没执行的惩罚。
+
+   如下图，可以查看惩罚金额(slash_amount)，原因(slash_reason)，惩罚执行时间(slash_exec_time)，惩罚产生时间(slash_time)等信息。
+
+   ![image-20211020113330231](Machine_verification.assets/image-20211020113330231.png)
+
+   注意，如果查看到为乱码，需要更新类型，最新的类型：https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json
