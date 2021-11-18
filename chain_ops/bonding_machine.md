@@ -93,7 +93,7 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 #### 使用`机器私钥`生成签名数据
 
-使用下面的[脚本 https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/master/scripts/test_script/gen_signature.js](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/master/scripts/test_script/gen_signature.js)生成签名数据。
+使用下面的[脚本 ](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/master/scripts/test_script/gen_signature.js)生成签名数据。
 
 注意`--key` 指定`机器私钥`, **key 前面加上 0x**； `--msg` 指定需要签名的消息，消息内容为 `机器ID+资金账户`；
 

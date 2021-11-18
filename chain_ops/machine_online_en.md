@@ -1,17 +1,10 @@
-# Machine winding steps
+# Machine Onchain steps
 
 ## Method 1: Binding via web wallet
 
 ### 0. Ready to work
 
 - Before binding, please make sure you have enough balance in your wallet. (Each card is estimated to be 100,000 DBC).
-- Open the settings page of the web wallet：`https://www.dbcwallet.io/?rpc=wss%3A%2F%2Fpreinfo.dbcwallet.io#/settings/developer`
-
-- Open`https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/alpha-v2.1/dbc_types.json` ，Copy the content of `types.json`, paste it into the web wallet settings page, and click Save.
-
-  ![](bonding_machine.assets/火狐截图_2021-06-01T08-25-33.414Z.png)
-
-- Refresh the page and wait a while.
 
 ### 1. Capital account binding control account
 
@@ -53,12 +46,12 @@ node_private_key=398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef8
 
 #### Use `machine private key` to generate signature data
 
-Use the following [script](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/feature/staking_v3.0.0_online_profile/scripts/test_script/gen_signature.js) to generate signature data.
+Use the following [script](https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/master/scripts/test_script/gen_signature.js) to generate signature data.
 
 ```shell
 #Instructions
 1. Install nodejs 14 on the linux server (the version must be 14, otherwise there will be other errors, please Google for the installation method)
-2. Clone script: git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git -b feature/staking_v3.0.0_online_profile
+2. Clone script: git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git
 3. Installation: cd DeepBrainChain-MainChain/scripts/test_script && npm install
 4. Execute the script
 ```
@@ -69,6 +62,7 @@ The data after `Signature:` is the **signature data**.
 
 ```bash
 ❯ node gen_signature.js --key 0x398f0c28f98885e046333d4a41c19cee4c37368a9832c6502f6cfd182e2aef89 --msg 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
+
 ### Message: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a485CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL
 ### Signer: 8eaf04151687736326c9fea17e25fc5287613693c912909cb226aa4794f26a48
 ### Signature: 0x5cc8b4c49b244d7c071b124ef68119d7549dd805ea43f69e3c142fd5909f926041a9cad93b16085d72431df2d1164e7911085423bca16625295583686f2fce8c
