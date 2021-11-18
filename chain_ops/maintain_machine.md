@@ -1,22 +1,20 @@
-###  补充质押
+# TODO
 
-> 机器第一次绑定时，质押绑定一张卡所需要的DBC，当机器被委员会审核通过后，系统将根据委员会提交的信息（GPU数）检查并增加卡数对应的质押。
+### 补充质押
+
+> 机器第一次绑定时，质押绑定一张卡所需要的 DBC，当机器被委员会审核通过后，系统将根据委员会提交的信息（GPU 数）检查并增加卡数对应的质押。
 >
-> 此时，当质押不够时，机器ID将被放到`online_profile模块`--`live_machine`变量的`fulfilling_machine`字段中，表示需要**补充质押**，才能上线。
+> 此时，当质押不够时，机器 ID 将被放到`online_profile模块`--`live_machine`变量的`fulfilling_machine`字段中，表示需要**补充质押**，才能上线。
 
 补充质押的操作：
 
 ![image-20210628174246842](maintain_machine.assets/image-20210628174246842.png)
 
-
-
 ### 重新绑定
 
-> 当机器被委员会拒绝后，有10天的时间可以声明重新绑定。
+> 当机器被委员会拒绝后，有 10 天的时间可以声明重新绑定。
 
 ![image-20210628173325854](maintain_machine.assets/image-20210628173325854.png)
-
-
 
 ### 声明机器下线
 
@@ -33,4 +31,3 @@
 操作：`onlineProfile`--`controllerReportOnline`
 
 ![image-20210628174734910](maintain_machine.assets/image-20210628174734910.png)
-
