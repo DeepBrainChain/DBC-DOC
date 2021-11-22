@@ -10,7 +10,7 @@
 
 - Description：
 
-  - For the safety of your account funds, we strongly recommend using a multi-signature account as a capital account. For multi-signature accounts, please go tohttps://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E5%A4%9A%E9%87%8D%E7%AD%BE%E5%90%8D%E8%B4%A6%E6%88%B7.md
+  - For the safety of your account funds, we strongly recommend using a multi-signature account as a capital account. For multi-signature accounts, please go to https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/%E5%A4%9A%E9%87%8D%E7%AD%BE%E5%90%8D%E8%B4%A6%E6%88%B7.md
   - The `Funding Account` is built into the machine. When the machine is bound, the DBC will be pledged from the `Funding Account`, and when the rewards are distributed, it will be issued to the `Funding Account`.
   - `Control account` is the manager, responsible for the operation of the machine, maintenance, etc.
   - `Funding account` must specify a `control account`.
