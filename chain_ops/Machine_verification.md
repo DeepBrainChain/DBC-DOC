@@ -1,5 +1,7 @@
 # 委员会如何验证机器
 
+> DBC 主网已上线。以下所有操作，请到主网执行：https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfo.dbcwallet.io#/explorer
+
 0. 成为验证委员会成员
 
    可以通过社区投票（提交议案）参加委员会。
@@ -103,4 +105,3 @@
    ![image-20211020113330231](Machine_verification.assets/image-20211020113330231.png)
 
    注意，如果查看到为乱码，需要更新类型，类型文件：https://github.com/DeepBrainChain/DeepBrainChain-MainChain/blob/master/dbc_types.json
-
