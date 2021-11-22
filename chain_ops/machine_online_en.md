@@ -6,6 +6,9 @@
 
 - Before binding, please make sure you have enough balance in your wallet. (Each card is estimated to be 100,000 DBC).
 
+  > DBC-Mainnet is launched, Please go to https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfo.dbcwallet.io#/explorer to make machine onchain!
+  > The following steps in browser should be done in DBC-Mainnet
+
 ### 1. Capital account binding control account
 
 - Description：
