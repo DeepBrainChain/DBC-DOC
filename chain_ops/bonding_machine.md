@@ -24,7 +24,7 @@ Secret phrase `final huge obscure action vacuum public banner autumn remove clos
 
 方式 2: **通过网页生成账户**时的私钥位置：
 
-到网页钱包，点击`添加账户`，在弹出框中会提示`助记词`，**点击右侧`助记词`**，可以**_切换到`原始种子`，即为需要保存的私钥，妥善保存！_**
+到[网页钱包 https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfo.dbcwallet.io#/explorer](https://www.dbcwallet.io/?rpc=wss%3A%2F%2Finfo.dbcwallet.io#/explorer)，点击`添加账户`，在弹出框中会提示`助记词`，**点击右侧`助记词`**，可以**_切换到`原始种子`，即为需要保存的私钥，妥善保存！_**
 
 ![2021-09-13_09-58](bonding_machine.assets/2021-09-13_09-58.png)
 
