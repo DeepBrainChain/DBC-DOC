@@ -57,8 +57,44 @@ sudo mount -a
 > KVM acceleration can be used
 > Indicates that subsequent operations can be performed. If the display does not match it, please check whether VT-d is turned on correctly
 
+## If you are a ubuntu20.04 system, please do the following
+
++ Set up a blacklist to prevent the card from being occupied
+```shell
+sudo vim /etc/modprobe.d/blacklist.conf
+#Finally add content:
+blacklist snd_hda_intel
+blacklist amd76x_edac
+blacklist vga16fb
+blacklist nouveau
+blacklist rivafb
+blacklist nvidiafb
+blacklist rivatv
+```
++ Set up graphics pass-through
+
+```shell
+#Query graphics card ID
+lspci -nnv | grep NVIDIA
+Copy the ID of the graphics card, such as 10de:2231 10de:1aef, and keep the duplicate content only once
+
+#Modify the core file
+sudo vim /etc/default/grub
+#Add in GRUB_CMDLINE_LINUX_DEFAULT field (if it is AMD platform, intel_iommu=on is changed to amd_iommu=on)
+quiet splash intel_iommu=on kvm.ignore_msrs=1 vfio-pci.ids=<graphics card id, separated by commas>
+
+#Update kernel
+sudo update-grub
+
+#Restart the machine
+#Query graphics card occupancy
+lspci -vv -s <graphics card PCI interface> | grep driver
+```
+> If vfio-pci is displayed, it is normal. For non-vfio-pci, please go back and check whether the grub file is written correctly or ***Follow step 6 and 2 for manual binding***
+***This is the end of the 20.04LTS system graphics isolation step, please go to step 7 to continue the operation***
 
 
+## If you are a ubuntu18.04 system, please continue to operate
 ## enable system grouping
 
 ### 1. Configure intel_iommu
