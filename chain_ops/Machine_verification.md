@@ -96,7 +96,10 @@
 
      ![image-20211020112948942](Machine_verification.assets/image-20211020112948942.png)
 
-8. 查询惩罚(TODO)
+8. 委员会添加质押
+   可以调用 `committee` --> `committeeAddStake` 方法。当(质押数量-已使用的质押) > 质押数量\*40%时，委员会状态为"可派单的"
+
+9. 查询惩罚(TODO)
 
    委员会可以通过 开发者--链状态--选择 committee 模块的 pendingSlash 方法来查询奖励。其中，SlashId 为自增的，可以不包含该值，查询所有还没执行的惩罚。
 
