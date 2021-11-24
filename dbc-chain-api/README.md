@@ -1,4 +1,17 @@
-[TOC]
+- [DBC-Blockchain 主网 RPC](#dbc-blockchain-主网-rpc)
+- [RPC 说明](#rpc-说明)
+- [如何搭建自己的 RPC 节点](#如何搭建自己的-rpc-节点)
+- [**关于`块高`，奖励发放时间，与`Era`的说明**：](#关于块高奖励发放时间与era的说明)
+  - [获取当前块高](#获取当前块高)
+  - [Era 与奖励发放时间](#era-与奖励发放时间)
+- [DBC Custom RPC](#dbc-custom-rpc)
+  - [1. 查询某个资金账户控制的所有机器](#1-查询某个资金账户控制的所有机器)
+  - [2. 查询机器某个 Era 获得收益](#2-查询机器某个-era-获得收益)
+  - [3. 查询机器某个 Era 解锁收益](#3-查询机器某个-era-解锁收益)
+  - [4. 查询资金账户某个 Era 获得收益](#4-查询资金账户某个-era-获得收益)
+  - [5. 查询资金账户某个 Era 解锁奖励](#5-查询资金账户某个-era-解锁奖励)
+  - [6. 查询机器详细信息](#6-查询机器详细信息)
+  - [7. 查询链上历史币价](#7-查询链上历史币价)
 
 ## DBC-Blockchain 主网 RPC
 
@@ -116,12 +129,15 @@ cargo build --release
 
 - 示例：
 
-  ```
+  ```json
   {
-       "jsonrpc":"2.0",
-        "id":1,
-        "method":"onlineProfile_getMachineEraReward",
-        "params": ["ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875", 1]
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "onlineProfile_getMachineEraReward",
+    "params": [
+      "ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875",
+      1
+    ]
   }
   ```
 
@@ -129,11 +145,11 @@ cargo build --release
 
 - 结果：
 
-  ```
+  ```json
   {
-      "jsonrpc": "2.0",
-      "result": "123456",
-      "id": 1
+    "jsonrpc": "2.0",
+    "result": "123456",
+    "id": 1
   }
   ```
 
@@ -143,12 +159,15 @@ cargo build --release
 
 - 示例：
 
-  ```
+  ```json
   {
-       "jsonrpc":"2.0",
-        "id":1,
-        "method":"onlineProfile_getMachineEraReleasedReward",
-        "params": ["ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875", 1]
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "onlineProfile_getMachineEraReleasedReward",
+    "params": [
+      "ee0d003006f8ddbccb97dff96bcb4bee1b8c1aeaf7c64e0ca9d0f31752d17875",
+      1
+    ]
   }
   ```
 
@@ -156,11 +175,11 @@ cargo build --release
 
 - 结果：
 
-  ```
+  ```json
   {
-      "jsonrpc": "2.0",
-      "result": "123456",
-      "id": 1
+    "jsonrpc": "2.0",
+    "result": "123456",
+    "id": 1
   }
   ```
 
@@ -170,12 +189,12 @@ cargo build --release
 
 - 示例：
 
-  ```
+  ```json
   {
-       "jsonrpc":"2.0",
-        "id":1,
-        "method":"onlineProfile_getStashEraReward",
-        "params": ["5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z", 1]
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "onlineProfile_getStashEraReward",
+    "params": ["5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z", 1]
   }
   ```
 
@@ -183,11 +202,11 @@ cargo build --release
 
 - 结果：
 
-  ```
+  ```json
   {
-      "jsonrpc": "2.0",
-      "result": "123456",
-      "id": 1
+    "jsonrpc": "2.0",
+    "result": "123456",
+    "id": 1
   }
   ```
 
@@ -197,12 +216,12 @@ cargo build --release
 
 - 示例：
 
-  ```
+  ```json
   {
-       "jsonrpc":"2.0",
-        "id":1,
-        "method":"onlineProfile_getStashEraReward",
-        "params": ["5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z", 1]
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "onlineProfile_getStashEraReward",
+    "params": ["5DhR2dxiPZquPhFjfPzFg5jZENdr375hbX643kr9FBXMVa2z", 1]
   }
   ```
 
@@ -210,11 +229,11 @@ cargo build --release
 
 - 结果：
 
-  ```
+  ```json
   {
-      "jsonrpc": "2.0",
-      "result": "123456",
-      "id": 1
+    "jsonrpc": "2.0",
+    "result": "123456",
+    "id": 1
   }
   ```
 
