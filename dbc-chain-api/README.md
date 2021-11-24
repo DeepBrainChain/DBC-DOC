@@ -9,8 +9,8 @@
     - [获取当前块高](#获取当前块高)
     - [Era 与奖励发放时间](#era-与奖励发放时间)
   - [DBC Custom RPC](#dbc-custom-rpc)
-    - [1. 查询某个资金账户控制的所有机器](#1-查询某个资金账户控制的所有机器)
-    - [2. 查询机器某个 Era 获得收益](#2-查询机器某个-era-获得收益)
+    - [1. 查询某个资金账户控制的所有机器:](#1-查询某个资金账户控制的所有机器)
+    - [2. 查询机器某个 Era 获得收益： `onlineProfile_getMachineEraReward`](#2-查询机器某个-era-获得收益-onlineprofile_getmachineerareward)
     - [3. 查询机器某个 Era 解锁收益](#3-查询机器某个-era-解锁收益)
     - [4. 查询资金账户某个 Era 获得收益](#4-查询资金账户某个-era-获得收益)
     - [5. 查询资金账户某个 Era 解锁奖励](#5-查询资金账户某个-era-解锁奖励)
@@ -62,7 +62,7 @@ git clone https://github.com/DeepBrainChain/DeepBrainChain-MainChain.git && cd D
 cargo build --release
 
 # 运行同步节点：
-./target/release/dbc-chain --base-path ./db_data --chain ./dbcSpecRaw.json --pruning archive --rpc-cors all --no-mdns --bootnodes /ip4/111.44.254.180/tcp/30151/p2p/12D3KooWPyJ1s1k3BgBNh9kfxUp9ge27q5FPPVk8UrwDkK153yBq
+./target/release/dbc-chain --base-path ./db_data --chain ./dbcSpecRaw.json --pruning archive --rpc-cors all --no-mdns --bootnodes /ip4/111.44.254.180/tcp/20337/p2p/12D3KooWNtUXjdy8Q9hvdJ35a1jWpPnVBRgpT7nP8LmEgBWGqTpm
 
 # 重要参数：
 --rpc-port 9933   # 指定你的节点监听RPC的端口。 9933 是默认值，因此该参数也可忽略
