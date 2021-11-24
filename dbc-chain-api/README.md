@@ -226,3 +226,29 @@ cargo build --release
 #### 6. 查询机器详细信息
 
 #### 7. 查询链上历史币价
+
+TODO:
+
+```bash
+committee_getCommitteeList
+
+onilneCommittee_getCommitteeMachineList
+onlineCommittee_getCommitteeOps
+onlineCommittee_getMachineCommitteeList
+
+onlineProfile_getMachineEraReleasedReward
+onlineProfile_getMachineEraReward
+onlineProfile_getMachineInfo
+onlineProfile_getMachineList
+onlineProfile_getOpInfo
+onlineProfile_getPosGpuInfo
+onlineProfile_getStakerIdentity
+onlineProfile_getStakerInfo
+onlineProfile_getStakerListInfo
+onlineProfile_getStakerNum
+onlineProfile_getStashEraReleasedReward
+onlineProfile_getStashEraReward
+
+rentMachine_getRentList
+rentMachine_getRentOrder
+```
