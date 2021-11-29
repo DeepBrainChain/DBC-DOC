@@ -318,7 +318,7 @@ sudo systemctl status dbc
 
 ## 十一、下载镜像模板（请放置于/data目录下，dbc启动虚拟机会去/data目录搜寻）
 
-http://111.44.254.179:22244/ubuntu-img/
+http://183.60.141.59:5100/ubuntu-img/
 下载：ubuntu.qcow2 和 ubuntu-2004.qcow2 这两个镜像
 
 
