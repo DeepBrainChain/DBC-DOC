@@ -63,6 +63,10 @@
    <img width="751" alt="1631934612(1)" src="https://user-images.githubusercontent.com/32829693/133870573-04dbcb84-9112-4837-b8e4-20db8538c079.png">
 
    <img width="584" alt="46ee522c8a34cfe14979db0e7b91ca6" src="https://user-images.githubusercontent.com/32829693/133871452-06dde25a-9691-44dc-b35b-124dbece44fd.png">
+   查看机器GPU信息
+
+   创建虚拟机机器：
+   ![test_create](bonding_machine.assets/test_create.png)
 
 4. 委员会计算获得机器信息的 hash
 
