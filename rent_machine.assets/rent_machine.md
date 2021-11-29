@@ -28,7 +28,7 @@
 
 #### 步骤三：搭建客户端节点
 
-* 下载客户端节点压缩包地址：http://111.44.254.179:22244/dbc/dbc_client_node_0.3.7.4.tar.gz
+* 下载客户端节点压缩包地址：http://114.116.21.175:22244/dbc/dbc_client_node_0.3.7.5.tar.gz
 
 * 解压安装包
 
@@ -42,7 +42,7 @@
 
 * 生成签名信息
 
-  - 在linux服务器下载签名工具http://111.44.254.179:22244/sign_tool
+  - 在linux服务器下载签名工具 http://114.116.21.175:22244/dbc/sign_tool
   - linux服务器安装libvirtd
   - 执行`chmod +x sign_tool`添加可执行权限
   - 生成签名信息：`./sign_tool 钱包地址 钱包私钥`
@@ -51,7 +51,7 @@
 * post发送请求创建虚拟机
 
   - 下载安装postman，具体下载请去官网根据操作系统安装
-  - 下载json文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
+  - 下载json文件：http://114.116.21.175:22244/dbc-develop-0.3.7.5.postman_collection.json
   - 导入json文件：`fiel`----`import`----`选择json文件导入` 
 
   ![import](import.png)
