@@ -37,7 +37,7 @@
 
    下载安装 postman，具体下载请去官网根据操作系统安装
 
-   下载 json 文件：http://111.44.254.179:22244/tmp_api.postman_collection.json
+   下载 json 文件：http://114.116.21.175:22244/dbc-develop-0.3.7.5.postman_collection.json
 
    导入 json 文件：fiel----import----选择 json 文件导入 import
    ![image](https://user-images.githubusercontent.com/32829693/133870420-b790637c-cab6-44f9-ba00-493eadc951cd.png)
