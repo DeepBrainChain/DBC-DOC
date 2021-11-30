@@ -41,8 +41,7 @@
 
    导入 json 文件：fiel----import----选择 json 文件导入 import
    ![image](https://user-images.githubusercontent.com/32829693/133870420-b790637c-cab6-44f9-ba00-493eadc951cd.png)
-   将客户端 ip 地址以及端口更换为 111.44.254.182:5008
-
+   将客户端 ip 地址以及端口更换为 121.57.95.175:5679
    查看宿主机详细信息：
 
    ```shell
