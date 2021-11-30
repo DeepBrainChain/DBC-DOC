@@ -383,5 +383,5 @@ sudo systemctl restart dbc
 
 ## Machine on the chain
 
-https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/Machine_winding_steps_english.md
+https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/machine_online_en.md
 
