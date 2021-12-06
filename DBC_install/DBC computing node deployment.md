@@ -292,15 +292,8 @@ sudo ./add_dbc_user.sh dbc
 
 ## Install the DBC node program
 
-> Note: need to switch to dbc user installation （github：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases）
-
-```shell
-su - dbc
-sudo mkdir install && cd install 
-sudo wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/install_dbc_ry_machine.sh
-sudo bash ./install_dbc_ry_machine.sh -d
-sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
-```
++ Note: need to switch to dbc user installation （github：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases）
++ Please refer to the installation/upgrade DBC program https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.6/readme.txt
 
 
 ## Restart DBC program & service status check
