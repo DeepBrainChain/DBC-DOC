@@ -296,15 +296,8 @@ sudo ./add_dbc_user.sh dbc
 
 ## 九、安装DBC节点程序
 
-> 注意：需要切换到dbc用户安装 （dbc最新程序在github地址：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases ）
-
-```shell
-su - dbc
-sudo mkdir install && cd install
-sudo wget http://111.44.254.179:22244/dbc/install_dbc_ry_machine.sh
-sudo bash ./install_dbc_ry_machine.sh -d
-sudo bash ./install_dbc_ry_machine.sh -i /home/dbc
-```
++ 注意：需要切换到dbc用户安装 （dbc最新程序在github地址：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases ）
++ 安装升级请参考 https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.6/readme.txt
 
 
 ## 十、重启DBC程序&服务状态检查
