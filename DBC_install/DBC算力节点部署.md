@@ -321,13 +321,7 @@ http://183.60.141.59:5100/ubuntu-img/
 
 
 
-## 十三、个人钱包地址查看
-
-`cat /home/dbc/0.3.7.3/dbc_repo/conf/core.conf`
-
-
-
-## 十四、参数检查
+## 十三、参数检查
 
 ```shell
 #检查内存、硬盘、显卡、IP，如果在网站上没有看到下图的内容，说明系统没有检测到内存或者硬盘，需要手动执行一次检查命令：
@@ -344,14 +338,14 @@ sudo systemctl restart dbc
 > 如果GPU部分显示为N/A ，可以忽略。其他部分显示N/A或空，请手动改正后重启DBC
 
 
-## 十五、测试创建带有显卡直通的虚拟机,用来检测前面是否正确配置
+## 十四、测试创建带有显卡直通的虚拟机,用来检测前面是否正确配置
 + 测试程序下载地址：wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/check_env
 或者 wget http://111.44.254.179:22244/dbc/check_env
 + 二进制文件，添加执行权限直接执行即可: chmod 777 chec_env ;  ./check_env
 + 出现绿色`check vm domain_test successful`即为成功，若没有出现，请排查前面各项配置是否正确。
 
 
-## 十六、检测机器的各种硬件参数指标是否正常
+## 十五、检测机器的各种硬件参数指标是否正常
 + 如果第十五步检测成功，会成功创建一个虚拟机，通过ssh登陆进入这个虚拟机内部，其中：vm_local_ip是虚拟机的内网ip地址，用户名是dbc，pwd后面的是登陆密码
 <img width="542" alt="1629202906(1)" src="https://user-images.githubusercontent.com/32829693/129724788-d50728cd-913b-4e91-8d0b-e53a098da091.png">
 
@@ -373,12 +367,12 @@ sudo systemctl restart dbc
     + iptables -D LIBVIRT_FWI 2 -t filter
     + iptables -D LIBVIRT_FWO 2 -t filter 
 
-## 十七、查看机器是否正确加入到算力网络
+## 十六、查看机器是否正确加入到算力网络
 + 矿池搭建客户端节点
 + 详细内容请到链接查看：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/DBC_client_node_construction_steps_cn.md
 + 关于客户端节点：建议每家矿池搭建2个及以上客户端节点，保证在官方提供节点或者其他矿池提供节点掉线情况下依旧可以保证网络正常，如果网络中客户端节点过少或者挂掉过多，会影响机器出租情况。客户端节点搭建可以在其他服务器启动一个容器来部署，并不会占用太多资源。
 + ***客户端节点可以与算力节点部署在同一台机器，请注意上述链接中配置文件的修改***
-## 十八、机器上链
+## 十七、机器上链
 
 https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%BA%BF%E6%AD%A5%E9%AA%A4
 
