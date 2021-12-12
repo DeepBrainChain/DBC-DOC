@@ -310,35 +310,16 @@ http://183.60.141.59:5100/ubuntu-img/
 
 ## 十一、备份机器id以及私钥(非常重要，如果此私钥丢失会损失50%的质押币，请注意多个地方备份)
 
-> 备份如下文件内容：vi  /home/dbc/0.3.7.3/dbc_repo/dat/node.dat，放到安全的位置，后面如果重装系统或者重装DBC需要用原来的id和私钥，否则质押币会被扣除
+> 备份安装路径下的dat/node.dat文件，放到安全的位置，后面如果重装系统或者重装DBC需要用原来的id和私钥，否则质押币会被扣除
 
 
-
-## 十二、参数检查
-
-```shell
-#检查内存、硬盘、显卡、IP，如果在网站上没有看到下图的内容，说明系统没有检测到内存或者硬盘，需要手动执行一次检查命令：
-sudo bash   /home/dbc/0.3.7.3/dbc_repo/tool/node_info/node_info.sh
-
-# 重启DBC：
-sudo systemctl restart dbc
-```
-
-> 执行完成此步骤检查参数获取是否正常
->
-> cat /home/dbc/0.3.7.3/dbc_repo/.dbc_node_info.conf
->
-> 如果GPU部分显示为N/A ，可以忽略。其他部分显示N/A或空，请手动改正后重启DBC
-
-
-## 十三、测试创建带有显卡直通的虚拟机,用来检测前面是否正确配置
+## 十二、测试创建带有显卡直通的虚拟机,用来检测前面是否正确配置
 + 测试程序下载地址：wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/check_env
-或者 wget http://111.44.254.179:22244/dbc/check_env
 + 二进制文件，添加执行权限直接执行即可: chmod 777 chec_env ;  ./check_env
 + 出现绿色`check vm domain_test successful`即为成功，若没有出现，请排查前面各项配置是否正确。
 
 
-## 十四、检测机器的各种硬件参数指标是否正常
+## 十三、检测机器的各种硬件参数指标是否正常
 + 如果第十五步检测成功，会成功创建一个虚拟机，通过ssh登陆进入这个虚拟机内部，其中：vm_local_ip是虚拟机的内网ip地址，用户名是dbc，pwd后面的是登陆密码
 <img width="542" alt="1629202906(1)" src="https://user-images.githubusercontent.com/32829693/129724788-d50728cd-913b-4e91-8d0b-e53a098da091.png">
 
