@@ -310,7 +310,7 @@ http://183.60.141.59:5100/ubuntu-img/
 
 ## 十一、备份机器id以及私钥(非常重要，如果此私钥丢失会损失50%的质押币，请注意多个地方备份)
 
-> 备份安装路径下的dat/node.dat文件，放到安全的位置，后面如果重装系统或者重装DBC需要用原来的id和私钥，否则质押币会被扣除
+> 备份安装目录下的dat/node.dat文件，放到安全的位置，后面如果重装系统或者重装DBC需要用原来的id和私钥，否则质押币会被扣除
 
 
 ## 十二、测试创建带有显卡直通的虚拟机,用来检测前面是否正确配置
@@ -341,12 +341,12 @@ http://183.60.141.59:5100/ubuntu-img/
     + iptables -D LIBVIRT_FWI 2 -t filter
     + iptables -D LIBVIRT_FWO 2 -t filter 
 
-## 十五、查看机器是否正确加入到算力网络
+## 十四、查看机器是否正确加入到算力网络
 + 矿池搭建客户端节点
 + 详细内容请到链接查看：https://github.com/DeepBrainChain/DBC-DOC/blob/master/DBC_install/DBC_client_node_construction_steps_cn.md
 + 关于客户端节点：建议每家矿池搭建2个及以上客户端节点，保证在官方提供节点或者其他矿池提供节点掉线情况下依旧可以保证网络正常，如果网络中客户端节点过少或者挂掉过多，会影响机器出租情况。客户端节点搭建可以在其他服务器启动一个容器来部署，并不会占用太多资源。
 + ***客户端节点可以与算力节点部署在同一台机器，请注意上述链接中配置文件的修改***
-## 十六、机器上链
+## 十五、机器上链
 
 https://github.com/DeepBrainChain/DBC-DOC/blob/master/chain_ops/bonding_machine.md#%E6%9C%BA%E5%99%A8%E4%B8%8A%E7%BA%BF%E6%AD%A5%E9%AA%A4
 
