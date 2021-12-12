@@ -54,7 +54,7 @@ sudo mount -a
 > KVM acceleration can be used
 > 表示可以进行后续操作，如果显示与其不相符，请检查VT-d是否正确开启
 
-***如果您是20.04系统，操作以下内容即可，无需再去操作其他关于vfio-pci步骤，如果您是ubuntu18.04系统，请按照第四步开始操作***
+### 如果您是20.04系统，操作以下内容即可，无需再去操作其他关于vfio-pci步骤，如果您是ubuntu18.04系统，请按照第四步开始操作
 + 设置黑名单，使卡不被占用
 ```shell
 sudo vim /etc/modprobe.d/blacklist.conf  
