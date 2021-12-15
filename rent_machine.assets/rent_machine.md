@@ -26,7 +26,7 @@
 
 #### 步骤三：搭建客户端节点
 
-* 下载客户端节点压缩包地址：http://114.116.21.175:22244/dbc/dbc_client_node_0.3.7.5.tar.gz
+* 下载安装客户端节点参考： https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.6/readme.txt
 
 * 解压安装包
 
