@@ -28,7 +28,7 @@
 
 * 下载安装客户端节点参考： https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.6/readme.txt
 
-* 中国大陆下载地址： http://121.57.95.175:20027/index.html/dbc/
+* 中国大陆额外下载地址（同步于github）： http://121.57.95.175:20027/index.html/dbc/
 
 * 修改解压出的文件中`conf/core.conf`配置文件中的2个端口号(不要和其它节点相冲突即可,建议端口范围：5000 ~ 5100)
 
