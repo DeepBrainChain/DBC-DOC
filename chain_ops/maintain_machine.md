@@ -37,3 +37,5 @@
 操作： onlineProfile -- offlineMachineChangeHardwareInfo
 
 ![image](maintain_machine.assets/2021-12-15_14-12.png)
+
+然后执行： onlineProfile -- addMachineInfo 重新添加机器信息之后，将会被重新分配进行验证
