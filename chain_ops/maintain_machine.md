@@ -16,7 +16,7 @@
 
 ![image-20210628173325854](maintain_machine.assets/image-20210628173325854.png)
 
-### 声明机器下线
+### 因故障声明机器下线
 
 > 当机器出现故障时，为了避免被举报，机器维护者需要及时声明**机器下线**，来及时处理机器问题。
 
@@ -24,10 +24,16 @@
 
 ![image-20210628174652781](maintain_machine.assets/image-20210628174652781.png)
 
-### 声明机器上线
+### （因故障声明下线后）声明机器上线
 
 > 当机器从故障中恢复后，需要及时声明机器上线。
 
 操作：`onlineProfile`--`controllerReportOnline`
 
 ![image-20210628174734910](maintain_machine.assets/image-20210628174734910.png)
+
+### 下线修改机器配置（将会被重新进行验证）
+
+操作： onlineProfile -- offlineMachineChangeHardwareInfo
+
+![image](maintain_machine.assets/2021-12-15_14-12.png)

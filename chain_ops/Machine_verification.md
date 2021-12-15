@@ -62,19 +62,19 @@
    <img width="751" alt="1631934612(1)" src="https://user-images.githubusercontent.com/32829693/133870573-04dbcb84-9112-4837-b8e4-20db8538c079.png">
 
    <img width="584" alt="46ee522c8a34cfe14979db0e7b91ca6" src="https://user-images.githubusercontent.com/32829693/133871452-06dde25a-9691-44dc-b35b-124dbece44fd.png">
-   
-   查看机器GPU信息
+
+   查看机器 GPU 信息
 
    创建虚拟机机器：
    ![test_create](bonding_machine.assets/test_create.png)
-   
-   创建过程比较慢，大约在五分钟到十五分钟之间，在postman的查看task详细信息查看虚拟机登录信息及虚拟机状态，如返回的结果中"status": "creating"表示虚拟机正在创建，此时等待即可
+
+   创建过程比较慢，大约在五分钟到十五分钟之间，在 postman 的查看 task 详细信息查看虚拟机登录信息及虚拟机状态，如返回的结果中"status": "creating"表示虚拟机正在创建，此时等待即可
    ![task_info](bonding_machine.assets/task_info.png)
-   
+
    进入创建的虚拟机执行`nvidia-smi -L`查看显卡类型
    ![nvidia](bonding_machine.assets/nvidia.png)
- 
-   查询完成后将虚拟机删除，出现OK说明删除成功
+
+   查询完成后将虚拟机删除，出现 OK 说明删除成功
    ![delete](bonding_machine.assets/delete.png)
 
 4. 委员会计算获得机器信息的 hash
