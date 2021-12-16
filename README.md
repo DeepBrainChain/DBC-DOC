@@ -10,6 +10,6 @@
 
 - [链上 RPC](dbc-chain-api/README.md)
 
-- [机器租用]（rent_machine.assets/rent_machine.md）
+- [机器租用](https://github.com/DeepBrainChain/DBC-DOC/blob/master/rent_machine.assets/rent_machine.md)
 
 -
