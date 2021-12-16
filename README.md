@@ -9,3 +9,7 @@
 - [链上操作说明](chain_ops/README.md)
 
 - [链上 RPC](dbc-chain-api/README.md)
+
+- [机器租用]（rent_machine.assets/rent_machine.md）
+
+-
