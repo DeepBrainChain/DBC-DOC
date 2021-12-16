@@ -58,7 +58,7 @@
 * 生成签名信息
   * 在linux服务器下载签名工具：http://121.57.95.175:20027/index.html/sign_tool
   
-  * linux服务器安装`libvirtd`（sudo apt install libvirtd   /  yum install libvirtd）
+  * linux服务器安装`libvirtd`
   
   * 执行`chmod +x sign_tool`添加可执行权限
   
