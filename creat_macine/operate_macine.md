@@ -25,20 +25,20 @@
 
 - 创建虚拟机：选择创建虚拟机请求模块，`body`处填入：`peer_nodes_list`:机器id；`ssh_port`:定义ssh登录端口；`image_name`：要创建的虚拟机镜像名，`GPU_count`：根据机器实际GPU数量填入；`CPU_cores`：选择提供给虚拟机的CPU内核数（本操作属于宿主机CPU直通虚拟机，建议留给宿主机四个及以上CPU保证机器稳定运行，（虚拟机内核数最好为偶数），否则导致整个机器卡死，无法正常使用）；`mem_size`：填入内存大小（单位为G）;`disk_size`:填入硬盘大小（单位为G）;`vnc_port`:填入vnc的登录端口；`vm_xml`:自定义xml文件名称；`vm_xml_url`:自定义xml文件的路径
 
-  ![create](\create.png)
+  ![create](create.png)
 
 - 创建过程比较慢，大约在五分钟到十五分钟之间，在postman的查看task列表即可查看虚拟机状态，如返回的结果中"status": "creating"表示虚拟机正在创建（running表示创建成功），此时等待即可
 
-  ![all_task](\all_task.png)
+  ![all_task](all_task.png)
 
 - 查看虚拟机具体登录信息
 
-  ![task_info](\task_info.png)
+  ![task_info](task_info.png)
 
 - 停止虚拟机（启动，重启，重置，删除也是同等操作）
 
-  ![stop](\stop.png)
+  ![stop](stop.png)
 
 - 查看虚拟机的日志信息
 
-  ![task_log](\task_log.png)
+  ![task_log](task_log.png)
