@@ -6,8 +6,8 @@
 
 - [DBC computing node deployment English document](DBC_install/DBC%20computing%20node%20deployment.md)
 
-- [链上操作说明](chain_ops/README.md)
+- [链上操作说明](chain_ops/README.md) 已迁移至： https://deepbrainchain.github.io/DBC-Wiki/onchain-guide
 
-- [链上 RPC](dbc-chain-api/README.md)
+- [链上 RPC](dbc-chain-api/README.md) 已迁移至： https://deepbrainchain.github.io/DBC-Wiki/onchain-api/
 
 - [机器租用](https://github.com/DeepBrainChain/DBC-DOC/blob/master/rent_machine.assets/rent_machine.md)
