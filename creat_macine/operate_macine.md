@@ -37,5 +37,5 @@
 
 - 停止虚拟机（启动虚拟机，重启虚拟机，重置虚拟机，删除虚拟机也是同样操作）
 
-  ![stop](stop.png)
+  ![stop_task](stop_task.png)
 
