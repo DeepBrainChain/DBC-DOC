@@ -6,7 +6,7 @@
 
 - 下载安装postman，具体下载请去官网根据操作系统安装
 
-- 下载json文件：http://121.57.95.175:20027/index.html/deepbrainchain.postman_collection.json
+- 下载json文件：http://121.57.95.175:20027/index.html/GPU%20API.postman_collection.json
 
 - 导入json文件：`fiel`----`import`----`选择json文件导入`
 
