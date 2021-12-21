@@ -41,12 +41,8 @@
 
 #### 步骤二：搭建客户端
 
-* 下载客户端：http://121.57.95.175:20027/index.html/dbc/dbc_client_node_0.3.7.6.tar.gz
-* 解压客户端安装包
-* 修改解压出的文件下`conf/core.conf`配置文件中的2个端口号，不要和其它节点相冲突即可(建议端口范围：5000 ~ 5100，图片仅供参考)
-
-
-![client_port](./client_port.png)
+* 下载客户端：
+* 参考： https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.8/install_client.sh
 
 
 * 注意：一台机器上只能安装一个功能节点(mining_node)，但是，客户端节点可以安装多个
