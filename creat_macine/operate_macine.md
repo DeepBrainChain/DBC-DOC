@@ -8,6 +8,8 @@
 
 - 下载json文件：http://121.57.95.175:20027/index.html/GPU%20API.postman_collection.json (提示：客户端节点也可以自己部署，自定义ip地址和端口号，也可以自己指定域名)
 
+- 搭建客户端节点参考文档:https://github.com/DeepBrainChain/DBC-DOC/blob/master/creat_macine/Build_client.md
+
 - 导入json文件：`fiel`----`import`----`选择json文件导入`
 
   ![](import.png)
