@@ -42,7 +42,8 @@
 #### 步骤二：搭建客户端
 
 * 下载客户端：
-* 参考： https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.8/install_client.sh
+* 参考： https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/
+* 下载执行 install_client.sh 按提示输入即可
 
 
 * 注意：一台机器上只能安装一个功能节点(mining_node)，但是，客户端节点可以安装多个
