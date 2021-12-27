@@ -32,7 +32,7 @@
 
 - 查询指定机器创建过的虚拟机列表及虚拟机状态
 
-  ![task_list](./operate_macine.assets/task_list.png)
+  ![task_list](./create_macine.assets/task_list.png)
 
 - 停止虚拟机（启动虚拟机，重启虚拟机，重置虚拟机，删除虚拟机也是同样操作）
 
