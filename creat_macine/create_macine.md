@@ -4,7 +4,7 @@
 
 - 下载安装 postman，具体下载请去官网根据操作系统安装
 
-- 下载 json 文件：http://121.57.95.175:20027/index.html/deepbrainchain.postman_collection.json
+- 下载 json 文件：http://36.102.233.175:20027/index.html/GPU%20API.postman_collection.json
 
 - 导入 json 文件：`fiel`----`import`----`选择json文件导入`
 
@@ -26,7 +26,7 @@
 
 - 生成签名信息
 
-  - 在 linux 服务器下载签名工具：http://121.57.95.175:20027/index.html/sign_tool
+  - 在 linux 服务器下载签名工具：http://36.102.233.175:20027/index.html/sign_tool
 
   - linux 服务器安装`libvirtd`
 
