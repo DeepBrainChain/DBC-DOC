@@ -304,7 +304,7 @@ sudo ./add_dbc_user.sh dbc
 
 ## 十、下载镜像模板（请放置于/data目录下，dbc启动虚拟机会去/data目录搜寻）
 
-http://121.57.95.175:20027/index.html/ubuntu-img/
+http://36.102.233.175:20027/index.html/ubuntu-img/
 下载：ubuntu.qcow2 和 ubuntu-2004.qcow2 这两个镜像
 
 
