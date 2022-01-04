@@ -4,7 +4,7 @@
 
 - 下载安装 postman，具体下载请去官网根据操作系统安装
 
-- 下载 json 文件：http://121.57.95.175:20027/index.html/GPU%20API.postman_collection.json (提示：客户端节点也可以自己部署，自定义 ip 地址和端口号，也可以自己指定域名)
+- 下载 json 文件：http://36.102.233.175:20027/index.html/GPU%20API.postman_collection.json (提示：客户端节点也可以自己部署，自定义 ip 地址和端口号，也可以自己指定域名)
 
 - 搭建客户端节点参考文档:https://github.com/DeepBrainChain/DBC-DOC/blob/master/creat_macine/Build_client.md
 
