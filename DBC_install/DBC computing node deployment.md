@@ -311,7 +311,7 @@ Back up the contents of the following file: ` <installation path>/dat/node.dat`,
 
 ## Test to create a virtual machine with graphics card pass-through to check whether the previous configuration is correct
 + Test program download address: https://github.com/DeepBrainChain/DBC-AIComputingNet/releases
-+ Binary file, add execute permission and execute directly: chmod 777 chec_env ; ./check_env
++ Binary file, add execute permission and execute directly: chmod 777 check_env ; ./check_env
 + If the green check 'vm domain_test successful' appears, it means success. If it does not appear, please check whether the previous configurations are correct.
 
 ## Check whether the various hardware parameters of the machine are normal
