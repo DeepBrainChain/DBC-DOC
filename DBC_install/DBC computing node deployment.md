@@ -293,57 +293,24 @@ sudo ./add_dbc_user.sh dbc
 ## Install the DBC node program
 
 + Note: need to switch to dbc user installation （github：https://github.com/DeepBrainChain/DBC-AIComputingNet/releases）
-+ Please refer to the installation/upgrade DBC program https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.6/readme.txt
-
-
-## Restart DBC program & service status check
-
-```shell
-sudo systemctl stop dbc
-sudo systemctl start dbc
-sudo systemctl status dbc
-```
++ Please refer to the installation/upgrade DBC program https://github.com/DeepBrainChain/DBC-AIComputingNet/releases
 
 
 
 ## Download the mirror template
 
-+ http://183.60.141.59:5100/ubuntu-img/
++ http://36.102.233.175:20027/index.html/ubuntu-img/
 
 Download: ubuntu.qcow2 and ubuntu-2004.qcow2 these two mirrors
 
 
 ## Back up the machine id and private key (very important,if this private key is lost, 50% of the pledged coins will be lost, please pay attention to multiple backups)
 
-Back up the contents of the following file: ` /home/dbc/0.3.7.3/dbc_repo/dat/node.dat`, put it in a safe place, and use it later If you reinstall the system or reinstall DBC later, you need to use the original id and private key, otherwise the pledged coins will be deducted
+Back up the contents of the following file: ` <installation path>/dat/node.dat`, put it in a safe place, and use it later If you reinstall the system or reinstall DBC later, you need to use the original id and private key, otherwise the pledged coins will be deducted
 
-
-
-## Viewing personal wallet address
-
-`cat /home/dbc/0.3.7.3/dbc_repo/conf/core.conf`
-
-
-
-## Parameter check(Ignore it temporarily, it is being revised again, and the program package has been temporarily removed)
-
-```shell
-#Check the memory, hard disk, graphics card, IP, if you do not see the content of the following picture on the website, it means that the system does not detect the memory or hard disk, you need to manually execute a check command:
-sudo bash   /home/dbc/0.3.7.3/dbc_repo/tool/node_info/node_info.sh
-
-# Restart DBC:
-sudo systemctl restart dbc
-```
-
-> Perform this step to check whether the parameter acquisition is normal
->
-> cat /home/dbc/0.3.7.3/dbc_repo/.dbc_node_info.conf
->
-> If the GPU part is displayed as N/A, it can be ignored. Other parts show N/A or empty, please correct it manually and restart DBC
 
 ## Test to create a virtual machine with graphics card pass-through to check whether the previous configuration is correct
-+ Test program download address: wget https://github.com/DeepBrainChain/DBC-AIComputingNet/releases/download/0.3.7.3/check_env  or 
-   wget http://116.85.24.172:20444/static/dbc/check_env
++ Test program download address: https://github.com/DeepBrainChain/DBC-AIComputingNet/releases
 + Binary file, add execute permission and execute directly: chmod 777 chec_env ; ./check_env
 + If the green check 'vm domain_test successful' appears, it means success. If it does not appear, please check whether the previous configurations are correct.
 
