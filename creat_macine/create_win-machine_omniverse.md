@@ -10,7 +10,7 @@ ____
 
 - 到 [银河竞赛机器列表](https://galaxyrace.deepbrainchain.org/table) 找到对应类型的空闲机器
 
-  ![find_machine](./assets/rent_machine.assets/find_machine.png)
+  ![find_machine](./create_win-machine_omniverse/find_machine.png)
 
 ## 步骤二：租用链上机器
 
@@ -65,7 +65,7 @@ ____
   >}
   >```
   >示例：
-  >![create_win](create_win.png)
+  >![create_win](./create_win-machine_omniverse/create_win.png)
 
   * 创建过程的时间长短，会根据配置的不同而不同，大约在五分钟到十五分钟之间。
   * 可以通过请求`虚拟机详细信息`，查询到虚拟机`登录方式`以及虚拟机的`当前状态`（当状态值为"creating"，表示虚拟机正在创建过程中）
@@ -95,7 +95,7 @@ ____
 
 * 查看到虚拟机登录方式后，在本地打开远程连接
 
-  ![connect](connect.png)
+  ![connect](./create_win-machine_omniverse/connect.png)
 
 ## 步骤六：下载omniverse
 
@@ -103,10 +103,10 @@ ____
 
 * 根据官网的文档安装完成后：导航到`EXCHANGE(交易所)`在`Apps（应用）`部分中找到 `Audio2Face`，然后依次点击`“Install”（安装）`和`“Launch”（启动）`。
 
-  ![install](install.png)
+  ![install](./create_win-machine_omniverse/install.png)
 
 * 启动后，可以看到默认的头像及随附的语音及各模板参数（加载模板引擎时需等待几分钟）
 
   更多操作详情请[参考](https://docs.omniverse.nvidia.com/app_audio2face/app_audio2face/overview.html)
 
-  ![face_info](face_info.png)
+  ![face_info](./create_win-machine_omniverse/face_info.png)
