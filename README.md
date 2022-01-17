@@ -10,4 +10,4 @@
 
 - [链上 RPC](dbc-chain-api/README.md) 已迁移至： https://deepbrainchain.github.io/DBC-Wiki/onchain-api/
 
-- [机器租用](https://github.com/DeepBrainChain/DBC-DOC/blob/master/rent_machine.assets/rent_machine.md) 已迁移至 https://deepbrainchain.github.io/DBC-Wiki/onchain-guide/rent_machine.html
+- [机器租用](https://github.com/DeepBrainChain/DBC-DOC/blob/master/rent_machine.assets/rent-machine.md) 已迁移至 https://deepbrainchain.github.io/DBC-Wiki/onchain-guide/rent-machine.html
