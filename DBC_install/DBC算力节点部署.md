@@ -5,7 +5,7 @@
 ### 注意：系统采用ubuntu18.04 LTS或者20.04LTS,，并在开始前请卸载掉已经安装的显卡驱动，本操作不可带有显卡驱动
 
 ```shell
-sudo echo "140.82.114.4 gitub.com"   >> /etc/hosts
+sudo echo "140.82.114.4 github.com"   >> /etc/hosts
 sudo echo "199.232.5.194 github.global.ssl.fastly.net"   >> /etc/hosts
 sudo echo "nameserver 8.8.4.4" | sudo tee /etc/resolv.conf > /dev/null
 sudo apt-get update
